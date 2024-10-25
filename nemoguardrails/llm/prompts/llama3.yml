@@ -3,7 +3,7 @@ prompts:
     - task: general
       models:
         - llama3
-        - llama-3.1
+        - llama-3
 
       messages:
         - type: system
@@ -19,7 +19,7 @@ prompts:
     - task: generate_user_intent
       models:
         - llama3
-        - llama-3.1
+        - llama-3
 
       messages:
         - type: system
@@ -44,7 +44,7 @@ prompts:
     - task: generate_next_steps
       models:
         - llama3
-        - llama-3.1
+        - llama-3
 
       messages:
         - type: system
@@ -66,7 +66,7 @@ prompts:
     - task: generate_bot_message
       models:
         - llama3
-        - llama-3.1
+        - llama-3
 
       messages:
         - type: system
@@ -92,7 +92,7 @@ prompts:
     - task: generate_intent_steps_message
       models:
         - llama3
-        - llama-3.1
+        - llama-3
 
       messages:
         - type: system
@@ -121,7 +121,7 @@ prompts:
     - task: generate_value
       models:
         - llama3
-        - llama-3.1
+        - llama-3
 
       messages:
         - type: system
@@ -149,7 +149,7 @@ prompts:
     - task: generate_user_intent_from_user_action
       models:
         - llama3
-        - llama-3.1
+        - llama-3
       messages:
         - type: system
           content: "{{ general_instructions }}"
@@ -176,7 +176,7 @@ prompts:
     - task: generate_user_intent_and_bot_action_from_user_action
       models:
         - llama3
-        - llama-3.1
+        - llama-3
       messages:
         - type: system
           content: "{{ general_instructions }}"
@@ -213,7 +213,7 @@ prompts:
     - task: generate_value_from_instruction
       models:
         - llama3
-        - llama-3.1
+        - llama-3
       messages:
         - type: system
           content: |
@@ -239,7 +239,7 @@ prompts:
     - task: generate_flow_from_instructions
       models:
         - llama3
-        - llama-3.1
+        - llama-3
       content: |-
           # Example flows:
           {{ examples }}
@@ -252,7 +252,7 @@ prompts:
     - task: generate_flow_from_name
       models:
         - llama3
-        - llama-3.1
+        - llama-3
       messages:
         - type: system
           content: |
@@ -283,7 +283,7 @@ prompts:
     - task: generate_flow_continuation
       models:
         - llama3
-        - llama-3.1
+        - llama-3
       messages:
         - type: system
           content: "{{ general_instructions }}"
@@ -312,7 +312,7 @@ prompts:
     - task: generate_flow_continuation_from_flow_nld
       models:
         - llama3
-        - llama-3.1
+        - llama-3
       messages:
         - type: system
           content: "Directly response with expected answer. Don't provide any pre- or post-explanations."
