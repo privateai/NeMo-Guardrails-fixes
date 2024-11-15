@@ -41,7 +41,8 @@ You should now be able to invoke the `nemoguardrails` CLI.
 
  You can also use the `--help` flag to learn more about each of the `nemoguardrails` commands:
 
-#### actions-server
+### actions-server
+
  ```bash
  > nemoguardrails actions-server --help
 
@@ -54,7 +55,8 @@ You should now be able to invoke the `nemoguardrails` CLI.
   --help          Show this message and exit.
  ```
 
-#### chat
+### chat
+
  ```bash
  > nemoguardrails chat --help
 
@@ -89,7 +91,9 @@ You should now be able to invoke the `nemoguardrails` CLI.
                                                        [default: None]
   --help                                               Show this message and exit.
  ```
-#### server
+
+### server
+
 ```bash
 > nemoguardrails server --help
 
@@ -107,7 +111,8 @@ Options:
 --help                                                Show this message and exit.
 ```
 
-#### evaluate
+### evaluate
+
 ```bash
 > nemoguardrails evaluate --help
 
@@ -123,7 +128,8 @@ moderation:      Evaluate the performance of the moderation rails defined in a G
 topical:         Evaluates the performance of the topical rails defined in a Guardrails application. Computes accuracy for canonical form detection, next step generation, and next bot message generation. Only a single Guardrails application can be specified in the config option.
 ```
 
-#### convert
+### convert
+
 ```bash
 > nemoguardrails convert --help
 
