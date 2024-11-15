@@ -15,7 +15,7 @@ The changes related to the Colang language and runtime have moved to [CHANGELOG-
 
 - ???
 
-## [0.10.0] - 2024-09-23
+## [0.10.0] - 2024-09-27
 
 ### Added
 
