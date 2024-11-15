@@ -6,8 +6,8 @@
 
 For testing purposes, the Guardrails toolkit provides a command line chat that can be used to interact with the LLM.
 
-```
-> nemoguardrails chat --config examples/ [--verbose] [--verbose-llm-calls]
+```sh
+nemoguardrails chat --config examples/ [--verbose] [--verbose-llm-calls]
 ```
 
 ## Options
