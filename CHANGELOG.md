@@ -12,7 +12,6 @@ The changes related to the Colang language and runtime have moved to [CHANGELOG-
 ### Added
 
 - **Observability**: Add observability support with support for different backends ([#844](https://github.com/NVIDIA/NeMo-Guardrails/pull/844)) by @Pouyanpi
-- **Passthrough Support**: Add passthrough support in Colang 2 ([#779](https://github.com/NVIDIA/NeMo-Guardrails/pull/779))  by@Pouyanpi
 - **Private AI Integration**: Add Private AI Integration ([#815](https://github.com/NVIDIA/NeMo-Guardrails/pull/815)) by @letmerecall
 - **Patronus Evaluate API Integration**: Patronus Evaluate API Integration ([#834](https://github.com/NVIDIA/NeMo-Guardrails/pull/834)) by @varjoshi
 - **railsignore**: Add support for .railsignore file ([#846](https://github.com/NVIDIA/NeMo-Guardrails/pull/790)) by @ajanitshimanga
