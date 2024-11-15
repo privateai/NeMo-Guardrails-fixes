@@ -89,14 +89,16 @@ The tool modifies the original files. It is recommended to use version control t
 To use the conversion tool, use the following command:
 
 ```bash
-nemoguardrails convert /path/to/directory
+nemoguardrails convert --from-version '1.0' "path/to/config"
 ```
 
 The `convert` command has several options:
 
+- `--from-version`: The version of the colang files to migrate from. Available options: ['1.0', '2.0-alpha']. Default is `1.0`.
 - `--verbose` or `--no-verbose`: If the migration should be verbose and output detailed logs. Default is `no-verbose`.
 - `--validate` or `--no-validate`: If the migration should validate the output using Colang Parser. Default is `no-validate`.
 - `--use-active-decorator` or `--no-use-active-decorator`: If the migration should use the `active` decorator. Default is `use-active-decorator`.
+- `--include-main-flow` or `--no-include-main-flow`: If the migration should add a main flow to the config. Default is `include-main-flow`.
 
 ## Assumptions and Limitations
 
