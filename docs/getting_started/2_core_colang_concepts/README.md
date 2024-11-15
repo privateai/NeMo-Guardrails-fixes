@@ -30,7 +30,9 @@ nest_asyncio.apply()
 
 Colang is a modeling language for conversational applications. Use Colang to design how the conversation between a user and a bot should happen.
 
-> **NOTE**: throughout this guide, bot means the entire LLM-based Conversational Application.
+```{note}
+Throughout this guide, bot means the entire LLM-based Conversational Application.
+```
 
 ## Core Concepts
 
@@ -160,7 +162,9 @@ Once an input message is received from the user, a multi-step process begins.
 
 After an utterance, such as  "Hello!" in the previous example, is received from the user, the guardrails instance uses the LLM to compute the corresponding canonical form.
 
-> **NOTE**: NeMo Guardrails uses a task-oriented interaction model with the LLM. Every time the LLM is called, it uses a specific task prompt template, such as `generate_user_intent`, `generate_next_step`, `generate_bot_message`. See the [default template prompts](../../../nemoguardrails/llm/prompts/general.yml) for details.
+```{note}
+NeMo Guardrails uses a task-oriented interaction model with the LLM. Every time the LLM is called, it uses a specific task prompt template, such as `generate_user_intent`, `generate_next_step`, `generate_bot_message`. See the [default template prompts](../../../nemoguardrails/llm/prompts/general.yml) for details.
+```
 
 In the case of the "Hello!" message, a single LLM call is made using the `generate_user_intent` task prompt template. The prompt looks like the following:
 

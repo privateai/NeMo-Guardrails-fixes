@@ -1,10 +1,14 @@
 # AlignScore Deployment
 
-**NOTE**: The recommended way to use AlignScore with NeMo Guardrails is using the provided [Dockerfile](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/nemoguardrails/library/factchecking/align_score/Dockerfile). For more details, check out how to [build and use the image](using-docker.md).
+```{note}
+The recommended way to use AlignScore with NeMo Guardrails is using the provided [Dockerfile](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/nemoguardrails/library/factchecking/align_score/Dockerfile). For more details, check out how to [build and use the image](using-docker.md).
+```
 
 In order to deploy an AlignScore server, follow these steps:
 
-**IMPORTANT**: Installing AlignScore is not supported on Python 3.11.
+```{important}
+Installing AlignScore is not supported on Python 3.11.
+```
 
 1. Install the `alignscore` package from the GitHub repository:
 

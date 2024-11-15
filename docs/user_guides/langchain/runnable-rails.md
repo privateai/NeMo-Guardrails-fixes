@@ -35,7 +35,9 @@ To add guardrails around the LLM model in the above example:
 ```python
 chain_with_guardrails = prompt | (guardrails | model) | output_parser
 ```
-> **NOTE**: Using the extra parenthesis is essential to enforce the order in which the `|` (pipe) operator is applied.
+```{note}
+Using the extra parenthesis is essential to enforce the order in which the `|` (pipe) operator is applied.
+```
 
 To add guardrails to an existing chain (or any `Runnable`) you must wrap it similarly:
 

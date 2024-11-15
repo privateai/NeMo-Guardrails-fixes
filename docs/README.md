@@ -27,7 +27,9 @@ The [examples folder](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/exa
 * [Scripts](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples/scripts): These short scripts showcase various aspects of the main Python API.
 
 
-> **Note:** These examples are meant to showcase the process of building rails, not as out-of-the-box safety features. Customization and strengthening of the rails is highly recommended.
+```{note}
+These examples are meant to showcase the process of building rails, not as out-of-the-box safety features. Customization and strengthening of the rails is highly recommended.
+```
 
 ## User Guides
 

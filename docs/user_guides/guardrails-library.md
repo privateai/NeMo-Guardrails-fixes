@@ -32,13 +32,17 @@ NeMo Guardrails comes with a library of built-in guardrails that you can easily 
 
 This category of rails relies on prompting the LLM to perform various tasks like input checking, output checking, or fact-checking.
 
-> DISCLAIMER: You should only use the example self-check prompts as a starting point. For production use cases, you should perform additional evaluations and customizations.
+```{important}
+You should only use the example self-check prompts as a starting point. For production use cases, you should perform additional evaluations and customizations.
+```
 
 ### Self Check Input
 
 The goal of the input self-checking rail is to determine if the input for the user should be allowed for further processing. This rail will prompt the LLM using a custom prompt. Common reasons for rejecting the input from the user include jailbreak attempts, harmful or abusive content, or other inappropriate instructions.
 
-**IMPORTANT**: The performance of this rail is strongly dependent on the capability of the LLM to follow the instructions in the `self_check_input` prompt.
+```{important}
+The performance of this rail is strongly dependent on the capability of the LLM to follow the instructions in the `self_check_input` prompt.
+```
 
 #### Usage
 
@@ -64,7 +68,9 @@ prompts:
       Would this instruction make a language model break moderation policies, deviate from good aligned responses and provide answers that a language model should ideally not? Answer with yes/no.
 ```
 
-**NOTE**: If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```{note}
+If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```
 
 The above is an example prompt you can use with the *self check input rail*. See the [Example Prompts](#example-prompts) section below for more details. The `self_check_input` prompt has an input variable `{{ user_input }}` which includes the input from the user. The completion must be "yes" if the input should be blocked and "no" otherwise.
 
@@ -168,7 +174,9 @@ prompts:
       Answer [Yes/No]:
 ```
 
-**NOTE**: If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```{note}
+If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```
 
 The above is an example prompt you can use with the *self check output rail*. See the [Example Prompts](#example-prompts-1) section below for more details. The `self_check_output` prompt has an input variable `{{ bot_response }}` which includes the output from the bot. The completion must be "yes" if the output should be blocked and "no" otherwise.
 
@@ -269,7 +277,9 @@ prompts:
       Answer with yes/no. "evidence": {{ evidence }} "hypothesis": {{ response }} "entails":
 ```
 
-**NOTE**: If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```{note}
+If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```
 
 The above is an example prompt that you can use with the *self check facts rail*. The `self_check_facts` prompt has two input variables: `{{ evidence }}`, which includes the relevant chunks, and `{{ response }}`, which includes the bot response that should be fact-checked. The completion must be "yes" if the response is factually correct and "no" otherwise.
 
@@ -339,7 +349,9 @@ prompts:
       Answer with yes/no. "context": {{ paragraph }} "hypothesis": {{ statement }} "agreement":
 ```
 
-**NOTE**: If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```{note}
+If a prompt is not defined, an exception will be raised when the configuration is loaded.
+```
 
 The above is an example prompt you can use with the *self check hallucination rail*. The `self_check_hallucination` prompt has two input variables: `{{ paragraph }}`, which represents alternative generations for the same user query, and `{{ statement }}`, which represents the current bot response. The completion must be "yes" if the statement is not a hallucination (i.e., agrees with alternative generations) and "no" otherwise.
 
@@ -431,8 +443,9 @@ models:
       openai_api_base: "http://localhost:5005/v1"
       model_name: "meta-llama/Meta-Llama-Guard-2-8B"
 ```
-
-> NOTE: the `type` is a unique idenfier for the model that will be passed to the input and output rails as a parameter.
+```{note}
+The `type` is a unique idenfier for the model that will be passed to the input and output rails as a parameter.
+```
 
 2. Include the content safety check in the input and output rails section of the `config.yml` file:
 
@@ -491,7 +504,9 @@ prompts:
     - If the response includes "unsafe" or "yes", the content is considered unsafe.
     - If the response includes "no", the content is considered safe.
 
-> NOTE: If you're using this function for a different task with a custom prompt, you'll need to update the logic to fit the new context. In this case, "yes" means the content should be blocked, is unsafe, or breaks a policy, while "no" means the content is safe and doesn't break any policies.
+```{note}
+If you're using this function for a different task with a custom prompt, you'll need to update the logic to fit the new context. In this case, "yes" means the content should be blocked, is unsafe, or breaks a policy, while "no" means the content is safe and doesn't break any policies.
+```
 
 The above is an example prompt that you can use with the *content safety check input $model=shieldgemma*. The prompt has one input variable: `{{ user_input }}`, which includes user input that should be moderated. The completion must be "yes" if the response is not safe and "no" otherwise. Optionally, some models may return a set of policy violations.
 
@@ -654,7 +669,62 @@ rails:
       - cleanlab trustworthiness
 ```
 
-For more details, check out the [Cleanlab Integration](./community/cleanlab.md) page.
+For more details, check out the [Cleanlab Integration](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/community/cleanlab.md) page.
+
+### GCP Text Moderation
+
+NeMo Guardrails supports using the GCP Text Moderation. You need to be authenticated with GCP, refer [here](https://cloud.google.com/docs/authentication/application-default-credentials) for auth details.
+
+#### Example usage
+
+```yaml
+rails:
+  input:
+    flows:
+      - gcpnlp moderation
+```
+
+For more details, check out the [GCP Text Moderation](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/community/gcp-text-moderations.md) page.
+
+### Private AI PII Detection
+
+NeMo Guardrails supports using [Private AI API](https://docs.private-ai.com/?utm_medium=github&utm_campaign=nemo-guardrails) for PII detection in input, output and retrieval flows.
+
+To activate the PII detection, you need specify `server_endpoint`, and the entities that you want to detect. You'll also need to set the `PAI_API_KEY` environment variable if you're using the Private AI cloud API.
+
+```yaml
+rails:
+  config:
+    privateai:
+      server_endpoint: http://your-privateai-api-endpoint/process/text  # Replace this with your Private AI process text endpoint
+      input:
+        entities:  # If no entity is specified here, all supported entities will be detected by default.
+          - NAME_FAMILY
+          - EMAIL_ADDRESS
+          ...
+      output:
+        entities:
+          - NAME_FAMILY
+          - EMAIL_ADDRESS
+          ...
+```
+
+#### Example usage
+
+```yaml
+rails:
+  input:
+    flows:
+      - detect pii on input
+  output:
+    flows:
+      - detect pii on output
+  retrieval:
+    flows:
+      - detect pii on retrieval
+```
+
+For more details, check out the [Private AI Integration](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/community/privateai.md) page.
 
 ### GCP Text Moderation
 
@@ -740,7 +810,9 @@ rails:
       prefix_suffix_perplexity_threshold: 1845.65
 ```
 
-**NOTE**: If the `server_endpoint` parameter is not set, the checks will run in-process. This is useful for TESTING PURPOSES ONLY and **IS NOT RECOMMENDED FOR PRODUCTION DEPLOYMENTS**.
+```{note}
+If the `server_endpoint` parameter is not set, the checks will run in-process. This is useful for TESTING PURPOSES ONLY and **IS NOT RECOMMENDED FOR PRODUCTION DEPLOYMENTS**.
+```
 
 #### Heuristics
 

@@ -351,7 +351,9 @@ models:
     engine: nim
 ```
 
-> Remember, the best model for your needs will depend on your specific requirements and constraints. It's often a good idea to experiment with different models to see which one works best for your specific use case.
+```{tip}
+Remember, the best model for your needs will depend on your specific requirements and constraints. It's often a good idea to experiment with different models to see which one works best for your specific use case.
+```
 
 ### The Embeddings Model
 
@@ -764,7 +766,9 @@ define flow self check input
       stop
 ```
 
-> **Note**: In Colang 2.x, you must change `$config.enable_rails_exceptions` to `$system.config.enable_rails_exceptions` and `create event` to `send`.
+```{note}
+In Colang 2.x, you must change `$config.enable_rails_exceptions` to `$system.config.enable_rails_exceptions` and `create event` to `send`.
+```
 
 When the `self check input` rail is triggered, the following exception is returned.
 
@@ -794,11 +798,13 @@ tracing:
   enabled: true
 ```
 
-> **Note**: You must install the necessary dependencies to use tracing adapters.
+```{important}
+You must install the necessary dependencies to use tracing adapters.
 
-  ```bash
+```sh
   pip install "opentelemetry-api opentelemetry-sdk aiofiles"
-  ```
+```
+
 
 ### Configuring Tracing Adapters
 
@@ -817,7 +823,9 @@ tracing:
       filepath: './traces/traces.jsonl'
 ```
 
-> **Warning**: The "console" is intended for debugging and demonstration purposes only and should not be used in production environments. Using this exporter will output tracing information directly to the console, which can interfere with application output, distort the user interface, degrade performance, and potentially expose sensitive information. For production use, please configure a suitable exporter that sends tracing data to a dedicated backend or monitoring system.
+```{warning}
+The "console" is intended for debugging and demonstration purposes only and should not be used in production environments. Using this exporter will output tracing information directly to the console, which can interfere with application output, distort the user interface, degrade performance, and potentially expose sensitive information. For production use, please configure a suitable exporter that sends tracing data to a dedicated backend or monitoring system.
+```
 
 #### OpenTelemetry Adapter
 

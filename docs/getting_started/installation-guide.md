@@ -104,14 +104,14 @@ To keep the footprint of `nemoguardrails` as small as possible, these are not in
 
 ## Optional dependencies
 
-> [!IMPORTANT]
-> If pip fails to resolve dependencies when running `pip install nemoguardrails[all]`, you should specify additional constraints directly in the `pip install` command.
->
-> **Example Command**:
->
-> ```sh
-> pip install "nemoguardrails[all]" "pandas>=1.4.0,<3"
-> ```
+```{warning}
+If pip fails to resolve dependencies when running `pip install nemoguardrails[all]`, you should specify additional constraints directly in the `pip install` command.
+
+**Example Command**:
+
+```sh
+pip install "nemoguardrails[all]" "pandas>=1.4.0,<3"
+```
 
 To use OpenAI, just use the `openai` extra dependency that ensures that all required packages are installed.
 Make sure the `OPENAI_API_KEY` environment variable is set,

@@ -4,7 +4,9 @@ This document is a brief introduction Colang 1.0.
 
 Colang is a modeling language enabling the design of guardrails for conversational systems.
 
-__Warning:__ Colang can be used to perform complex activities, such as calling python scripts and performing multiple calls to the underlying language model. You should avoid loading Colang files from untrusted sources without careful inspection.
+```{warning}
+Colang can be used to perform complex activities, such as calling python scripts and performing multiple calls to the underlying language model. You should avoid loading Colang files from untrusted sources without careful inspection.
+```
 
 ## Why a New Language
 
@@ -30,7 +32,9 @@ Below are the main concepts behind the language:
 
 Colang has a "pythonic" syntax in the sense that most constructs resemble their python equivalent and indentation is used as a syntactic element.
 
-> NOTE: unlike python, the recommended indentation in Colang is **two spaces**, rather than four.
+```{note}
+Unlike python, the recommended indentation in Colang is **two spaces**, rather than four.
+```
 
 ### Core Syntax Elements
 
@@ -81,7 +85,9 @@ define bot express greeting
   "Hello there, {{ name }}!"
 ```
 
-**NOTE**: for more advanced use cases you can also use other Jinja features like `{% if ... %} ... {% endif %}`.
+```{note}
+For more advanced use cases you can also use other Jinja features like `{% if ... %} ... {% endif %}`.
+```
 
 #### Flows
 

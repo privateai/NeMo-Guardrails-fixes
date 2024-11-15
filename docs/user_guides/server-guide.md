@@ -8,17 +8,17 @@ The Guardrails Server loads a predefined set of guardrails configurations at sta
 
 To launch the server:
 
-```
-> nemoguardrails server [--config PATH/TO/CONFIGS] [--port PORT] [--prefix PREFIX] [--disable-chat-ui] [--auto-reload] [--default-config-id DEFAULT_CONFIG_ID]
+```sh
+nemoguardrails server [--config PATH/TO/CONFIGS] [--port PORT] [--prefix PREFIX] [--disable-chat-ui] [--auto-reload] [--default-config-id DEFAULT_CONFIG_ID]
 ```
 
 If no `--config` option is specified, the server will try to load the configurations from the `config` folder in the current directory. If no configurations are found, it will load all the example guardrails configurations.
 
 If a `--prefix` option is specified, the root path for the guardrails server will be at the specified prefix.
 
-**Note**: Since the server is designed to server multiple guardrails configurations, the `path/to/configs` must be a folder with sub-folders for each individual config. For example:
-
-```
+```{note}
+Since the server is designed to server multiple guardrails configurations, the `path/to/configs` must be a folder with sub-folders for each individual config. For example:
+```sh
 .
 ├── config
 │   ├── config_1
@@ -29,7 +29,9 @@ If a `--prefix` option is specified, the root path for the guardrails server wil
 │   ...
 ```
 
-**Note**: If the server is pointed to a folder with a single configuration, then only that configuration will be available.
+```{note}
+If the server is pointed to a folder with a single configuration, then only that configuration will be available.
+```
 
 If the `--auto-reload` option is specified, the server will monitor any changes to the files inside the folder holding the configurations and reload them automatically when they change. This allows you to iterate faster on your configurations, and even regenerate messages mid-conversation, after changes have been made. **IMPORTANT**: this option should only be used in development environments.
 
@@ -61,7 +63,7 @@ Sample response:
 ]
 ```
 
-#### /v1/chat/completions
+#### `/v1/chat/completions`
 
 To get the completion for a chat session, use the `/v1/chat/completions` endpoint:
 ```
@@ -134,7 +136,9 @@ To use server-side threads, you have to register a datastore. To do this, you mu
 
 Out-of-the-box, NeMo Guardrails has support for `MemoryStore` (useful for quick testing) and `RedisStore`. If you want to use a different backend, you can implement the [`DataStore`](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/nemoguardrails/server/datastore/datastore.py) interface and register a different instance in `config.py`.
 
-> NOTE: to use `RedisStore` you must install `aioredis >= 2.0.1`.
+```{caution}
+to use `RedisStore` you must install `aioredis >= 2.0.1`.
+```
 
 Next, when making a call to the `/v1/chat/completions` endpoint, you must also include a `thread_id` field:
 
@@ -152,7 +156,9 @@ POST /v1/chat/completions
 }
 ```
 
-> NOTE: for security reasons, the `thread_id` must have a minimum length of 16 characters.
+```{note}
+for security reasons, the `thread_id` must have a minimum length of 16 characters.
+```
 
 As an example, check out this [configuration](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples/configs/threads/README.md).
 
@@ -167,16 +173,20 @@ Threads are stored indefinitely; there is no cleanup mechanism.
 
 You can use the Chat UI to test a guardrails configuration quickly.
 
-**IMPORTANT**: You should only use the Chat UI for internal testing. For a production deployment of the NeMo Guardrails server, the Chat UI should be disabled using the `--disable-chat-ui` flag.
+```{important}
+You should only use the Chat UI for internal testing. For a production deployment of the NeMo Guardrails server, the Chat UI should be disabled using the `--disable-chat-ui` flag.
+```
 
 ## Actions Server
 
 The Actions Server enables you to run the actions invoked from the guardrails more securely (see [Security Guidelines](../security/guidelines.md) for more details). The action server should be deployed in a separate environment.
 
-**Note**: Even though highly recommended for production deployments, using an *actions server* is optional and configured per guardrails configuration. If no actions server is specified in a guardrails configuration, the actions will run in the same process as the guardrails server. To launch the server:
-
+```{note}
+Even though highly recommended for production deployments, using an *actions server* is optional and configured per guardrails configuration. If no actions server is specified in a guardrails configuration, the actions will run in the same process as the guardrails server. To launch the server:
 ```
-> nemoguardrails actions-server [--port PORT]
+
+```sh
+nemoguardrails actions-server [--port PORT]
 ```
 
 On startup, the actions server will automatically register all predefined actions and all actions in the current folder (including sub-folders).
