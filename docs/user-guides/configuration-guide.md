@@ -150,7 +150,7 @@ models:
 To use the `nvidia_ai_endpoints` LLM provider, you must install the `langchain-nvidia-ai-endpoints` package using the command `pip install langchain-nvidia-ai-endpoints`, and configure a valid `NVIDIA_API_KEY`.
 ```
 
-For further information, see the [user guide](./llm/nvidia_ai_endpoints/README.md).
+For further information, see the [user guide](./llm/nvidia-ai-endpoints/README.md).
 
 Here's an example configuration for using `llama3` model with [Ollama](https://ollama.com/):
 
@@ -666,7 +666,7 @@ Retrieval rails process the retrieved chunks, i.e., the `$relevant_chunks` varia
 
 ### Dialog Rails
 
-Dialog rails enforce specific predefined conversational paths. To use dialog rails, you must define canonical form forms for various user messages and use them to trigger the dialog flows. Check out the [Hello World](.https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples/bots/hello_world/README.md) bot for a quick example. For a slightly more advanced example, check out the [ABC bot](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples/bots/abc/README.md), where dialog rails are used to ensure the bot does not talk about specific topics.
+Dialog rails enforce specific predefined conversational paths. To use dialog rails, you must define canonical form forms for various user messages and use them to trigger the dialog flows. Check out the [Hello World](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples/bots/hello_world/README.md) bot for a quick example. For a slightly more advanced example, check out the [ABC bot](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples/bots/abc/README.md), where dialog rails are used to ensure the bot does not talk about specific topics.
 
 The use of dialog rails requires a three-step process:
 
@@ -804,7 +804,6 @@ You must install the necessary dependencies to use tracing adapters.
 ```sh
   pip install "opentelemetry-api opentelemetry-sdk aiofiles"
 ```
-
 
 ### Configuring Tracing Adapters
 

@@ -1,6 +1,6 @@
 # Topical Rails
 
-This guide will teach you what *topical rails* are and how to integrate them into your guardrails configuration. This guide builds on the [previous guide](../5_output_rails/README.md), developing further the demo ABC Bot.
+This guide will teach you what *topical rails* are and how to integrate them into your guardrails configuration. This guide builds on the [previous guide](../5-output-rails/README.md), developing further the demo ABC Bot.
 
 ## Prerequisites
 
@@ -73,7 +73,7 @@ You can see that the bot is starting to cooperate.
 
 ### Using Dialog Rails
 
-The [Core Colang Concepts](../2_core_colang_concepts/README.md) section of this getting started series, describes the core Colang concepts *messages* and *flows*. To implement topical rails using dialog, first define the user messages that correspond to the topics.
+The [Core Colang Concepts](../2-core-colang-concepts/README.md) section of this getting started series, describes the core Colang concepts *messages* and *flows*. To implement topical rails using dialog, first define the user messages that correspond to the topics.
 
 1. Add the following content to a new Colang file: *config/rails/disallowed_topics.co*:
 
@@ -183,7 +183,7 @@ bot refuse to respond about cooking
 
 Let's break it down:
    1. First, the `self_check_input` rail was triggered, which did not block the request.
-   2. Next, the `generate_user_intent` prompt was used to determine what the user's intent was. As explained in [Step 2](../2_core_colang_concepts/README.md) of this series, this is an essential part of how dialog rails work.
+   2. Next, the `generate_user_intent` prompt was used to determine what the user's intent was. As explained in [Step 2](../2-core-colang-concepts/README.md) of this series, this is an essential part of how dialog rails work.
    3. Next, as we can see from the Colang history above, the next step was `bot refuse to respond about cooking`, which came from the defined flows.
    4. Next, a message was generated for the refusal.
    5. Finally, the generated message was checked by the `self_check_output` rail.
@@ -221,4 +221,4 @@ This guide provides an overview of how topical rails can be added to a guardrail
 
 ## Next
 
-In the next guide, [Retrieval-Augmented Generation](../7_rag/README.md), demonstrates how to use a guardrails configuration in a RAG (Retrieval Augmented Generation) setup.
+In the next guide, [Retrieval-Augmented Generation](../7-rag/README.md), demonstrates how to use a guardrails configuration in a RAG (Retrieval Augmented Generation) setup.

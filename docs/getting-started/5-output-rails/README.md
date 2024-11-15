@@ -1,6 +1,6 @@
 # Output Rails
 
-This guide describes how to add output rails to a guardrails configuration. This guide builds on the previous guide, [Input Rails](../4_input_rails/README.md), developing further the demo ABC Bot.
+This guide describes how to add output rails to a guardrails configuration. This guide builds on the previous guide, [Input Rails](../4-input-rails/README.md), developing further the demo ABC Bot.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ nest_asyncio.apply()
 
 ## Output Moderation
 
-NeMo Guardrails comes with a built-in [output self-checking rail](../../user_guides/guardrails-library.md#output-checking). This rail uses a separate LLM call to make sure that the bot's response should be allowed.
+NeMo Guardrails comes with a built-in [output self-checking rail](../../user-guides/guardrails-library.md#output-checking). This rail uses a separate LLM call to make sure that the bot's response should be allowed.
 
 Activating the `self check output` rail is similar to the `self check input` rail:
 
@@ -292,4 +292,4 @@ I cannot talk about proprietary technology.
 
 ## Next
 
-The next guide, [Topical Rails](../6_topical_rails/README.md), adds a topical rails to the ABC bot, to make sure it only responds to questions related to the employment situation.
+The next guide, [Topical Rails](../6-topical-rails/README.md), adds a topical rails to the ABC bot, to make sure it only responds to questions related to the employment situation.

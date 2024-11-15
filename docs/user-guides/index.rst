@@ -15,9 +15,9 @@ User Guides
    python-api
    server-guide
    advanced/index
-   detailed_logging/index
-   input_output_rails_only/index
-   jailbreak_detection_heuristics/index
+   detailed-logging/index
+   input-output-rails-only/index
+   jailbreak-detection-heuristics/index
    langchain/index
    llm/index
-   multi_config_api/index
+   multi-config-api/index

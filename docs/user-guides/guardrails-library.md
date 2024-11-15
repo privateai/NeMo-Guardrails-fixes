@@ -249,7 +249,7 @@ prompts:
 
 The goal of the self-check fact-checking output rail is to ensure that the answer to a RAG (Retrieval Augmented Generation) query is grounded in the provided evidence extracted from the knowledge base (KB).
 
-NeMo Guardrails uses the concept of **relevant chunks** (which are stored in the `$relevant_chunks` context variable) as the evidence against which fact-checking should be performed. The relevant chunks can be extracted automatically, if the built-in knowledge base support is used, or provided directly alongside the query (see the [Getting Started Guide example](../getting_started/7_rag/README.md)).
+NeMo Guardrails uses the concept of **relevant chunks** (which are stored in the `$relevant_chunks` context variable) as the evidence against which fact-checking should be performed. The relevant chunks can be extracted automatically, if the built-in knowledge base support is used, or provided directly alongside the query (see the [Getting Started Guide example](../getting-started/7-rag/README.md)).
 
 **IMPORTANT**: The performance of this rail is strongly dependent on the capability of the LLM to follow the instructions in the `self_check_facts` prompt.
 
@@ -670,7 +670,7 @@ rails:
       - cleanlab trustworthiness
 ```
 
-For more details, check out the [Cleanlab Integration](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/community/cleanlab.md) page.
+For more details, check out the [Cleanlab Integration](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user-guides/community/cleanlab.md) page.
 
 ### GCP Text Moderation
 
@@ -685,7 +685,7 @@ rails:
       - gcpnlp moderation
 ```
 
-For more details, check out the [GCP Text Moderation](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/community/gcp-text-moderations.md) page.
+For more details, check out the [GCP Text Moderation](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user-guides/community/gcp-text-moderations.md) page.
 
 ### Private AI PII Detection
 
@@ -725,7 +725,7 @@ rails:
       - detect pii on retrieval
 ```
 
-For more details, check out the [Private AI Integration](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/community/privateai.md) page.
+For more details, check out the [Private AI Integration](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user-guides/community/privateai.md) page.
 
 ### Private AI PII Detection
 

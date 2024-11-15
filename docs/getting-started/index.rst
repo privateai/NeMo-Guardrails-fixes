@@ -13,10 +13,10 @@ Getting Started
    :maxdepth: 2
    :hidden:
 
-   1_hello_world/index
-   2_core_colang_concepts/index
-   3_demo_use_case/index
-   4_input_rails/index
-   5_output_rails/index
-   6_topical_rails/index
-   7_rag/index
+   1-hello-world/index
+   2-core-colang-concepts/index
+   3-demo-use-case/index
+   4-input-rails/index
+   5-output-rails/index
+   6-topical-rails/index
+   7-rag/index

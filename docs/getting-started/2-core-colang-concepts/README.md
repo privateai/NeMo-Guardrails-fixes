@@ -1,6 +1,6 @@
 # Core Colang Concepts
 
-This guide builds on the [Hello World guide](../1_hello_world/README.md) and introduces the core Colang concepts you should understand to get started with NeMo Guardrails.
+This guide builds on the [Hello World guide](../1-hello-world/README.md) and introduces the core Colang concepts you should understand to get started with NeMo Guardrails.
 
 ## Prerequisites
 
@@ -224,9 +224,9 @@ user "Hello!"
 
 The prompt has four logical sections:
 
-1. A set of general instructions. These can be [configured](../../user_guides/configuration-guide.md#general-instructions) using the `instructions` key in *config.yml*.
+1. A set of general instructions. These can be [configured](../../user-guides/configuration-guide.md#general-instructions) using the `instructions` key in *config.yml*.
 
-2. A sample conversation, which can also be [configured](../../user_guides/configuration-guide.md#sample-conversation) using the `sample_conversation` key in *config.yml*.
+2. A sample conversation, which can also be [configured](../../user-guides/configuration-guide.md#sample-conversation) using the `sample_conversation` key in *config.yml*.
 
 3. A set of examples for converting user utterances to canonical forms. The top five most relevant examples are chosen by performing a vector search against all the user message examples. For more details see [ABC Bot](../../../examples/bots/abc/README.md).
 
@@ -327,8 +327,8 @@ Based on these steps, we can see that the `ask general question` canonical form 
 
 ## Wrapping up
 
-This guide provides a detailed overview of two core Colang concepts: *messages* and *flows*. It also looked at how the message and flow definitions are used under the hood and how the LLM is prompted. For more details, see the reference documentation for the [Python API](../../user_guides/python-api.md) and the [Colang Language Syntax](../../user_guides/colang-language-syntax-guide.md).
+This guide provides a detailed overview of two core Colang concepts: *messages* and *flows*. It also looked at how the message and flow definitions are used under the hood and how the LLM is prompted. For more details, see the reference documentation for the [Python API](../../user-guides/python-api.md) and the [Colang Language Syntax](../../user-guides/colang-language-syntax-guide.md).
 
 ## Next
 
-The next guide, [Demo Use Case](../3_demo_use_case/README.md), guides you through selecting a demo use case to implement different types of rails, such as for input, output, or dialog.
+The next guide, [Demo Use Case](../3-demo-use-case/README.md), guides you through selecting a demo use case to implement different types of rails, such as for input, output, or dialog.

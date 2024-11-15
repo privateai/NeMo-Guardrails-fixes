@@ -93,7 +93,7 @@ The `nemoguardrails` package also defines the following extra dependencies:
 - `dev`: packages required by some extra Guardrails features for developers, such as the **autoreload** feature.
 - `eval`: packages used for the Guardrails [evaluation tools](../../nemoguardrails/evaluate/README.md).
 - `openai`: installs the latest `openai` package supported by NeMo Guardrails.
-- `sdd`: packages used by the [sensitive data detector](../user_guides/guardrails-library.md#sensitive-data-detection) integrated in NeMo Guardrails.
+- `sdd`: packages used by the [sensitive data detector](../user-guides/guardrails-library.md#sensitive-data-detection) integrated in NeMo Guardrails.
 - `all`: installs all extra packages.
 
 To keep the footprint of `nemoguardrails` as small as possible, these are not installed by default. To install any of the extra dependency you can use **pip** as well. For example, to install the `dev` extra dependencies, run the following command:
@@ -122,15 +122,15 @@ as shown in the following example, where *YOUR_KEY* is your OpenAI key.
  export OPENAI_API_KEY=YOUR_KEY
 ```
 
-Some NeMo Guardrails LLMs and features have specific installation requirements, including a more complex set of steps. For example, [AlignScore](../user_guides/advanced/align_score_deployment.md) fact-checking, using [Llama-2](../../examples/configs/llm/hf_pipeline_llama2/README.md) requires two additional packages.
+Some NeMo Guardrails LLMs and features have specific installation requirements, including a more complex set of steps. For example, [AlignScore](../user-guides/advanced/align_score_deployment.md) fact-checking, using [Llama-2](../../examples/configs/llm/hf_pipeline_llama2/README.md) requires two additional packages.
 For each feature or LLM example, check the readme file associated with it.
 
 ## Using Docker
 
-NeMo Guardrails can also be used through Docker. For details on how to build and use the Docker image see [NeMo Guardrails with Docker](../user_guides/advanced/using-docker.md).
+NeMo Guardrails can also be used through Docker. For details on how to build and use the Docker image see [NeMo Guardrails with Docker](../user-guides/advanced/using-docker.md).
 
 ## What's next?
 
-- Check out the [Getting Started Guide](../getting_started/README.md) and start with the ["Hello World" example](../getting_started/1_hello_world/README.md).
+- Check out the [Getting Started Guide](../getting-started/README.md) and start with the ["Hello World" example](../getting-started/1-hello-world/README.md).
 - Explore more examples in the [examples](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples) folder.
 - Review the [User Guides](../README.md).

@@ -4,5 +4,5 @@ LLMs
 .. toctree::
    :maxdepth: 2
 
-   nvidia_ai_endpoints/index
+   nvidia-ai-endpoints/index
    vertexai/index

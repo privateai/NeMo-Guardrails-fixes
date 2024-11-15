@@ -35,7 +35,7 @@ models:
     model: gpt-4
 
   - type: llm-judge
-    engine: nvidia_ai_endpoints
+    engine: nvidia-ai-endpoints
     model: meta/llama3-8b-instruct
 ```
 

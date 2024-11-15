@@ -1,6 +1,6 @@
 # Retrieval-Augmented Generation
 
-This guide shows how to apply a guardrails configuration in a RAG scenario. This guide builds on the [previous guide](../6_topical_rails/README.md), developing further the demo ABC Bot.
+This guide shows how to apply a guardrails configuration in a RAG scenario. This guide builds on the [previous guide](../6-topical-rails/README.md), developing further the demo ABC Bot.
 
 ## Prerequisites
 
@@ -110,5 +110,5 @@ This guide introduced how a guardrails configuration can be used in the context 
 ## Next
 
 To continue learning about NeMo Guardrails, check out:
-1. [Guardrails Library](../../../docs/user_guides/guardrails-library.md).
-2. [Configuration Guide](../../../docs/user_guides/configuration-guide.md).
+1. [Guardrails Library](../../../docs/user-guides/guardrails-library.md).
+2. [Configuration Guide](../../../docs/user-guides/configuration-guide.md).

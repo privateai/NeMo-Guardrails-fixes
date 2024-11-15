@@ -1,6 +1,6 @@
 # Hello World
 
-This guide shows you how to create a "Hello World" guardrails configuration that controls the greeting behavior. Before you begin, make sure you have [installed NeMo Guardrails](../../getting_started/installation-guide.md).
+This guide shows you how to create a "Hello World" guardrails configuration that controls the greeting behavior. Before you begin, make sure you have [installed NeMo Guardrails](../../getting-started/installation-guide.md).
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Every guardrails configuration must be stored in a folder. The standard folder s
 │   ├── ...
 ```
 
-See the [Configuration Guide](../../user_guides/configuration-guide.md) for information about the contents of these files.
+See the [Configuration Guide](../../user-guides/configuration-guide.md) for information about the contents of these files.
 
 1. Create a folder, such as *config*, for your configuration:
 
@@ -57,7 +57,7 @@ models:
    model: gpt-3.5-turbo-instruct
 ```
 
-The `models` key in the *config.yml* file configures the LLM model. For a complete list of supported LLM models, see [Supported LLM Models](../../user_guides/configuration-guide.md#supported-llm-models).
+The `models` key in the *config.yml* file configures the LLM model. For a complete list of supported LLM models, see [Supported LLM Models](../../user-guides/configuration-guide.md#supported-llm-models).
 
 ## Step 2: load the guardrails configuration
 
@@ -93,7 +93,7 @@ The format for the input `messages` array as well as the response follow the [Op
 
 ## Step 4: add your first guardrail
 
-To control the greeting response, define the user and bot messages, and the flow that connects the two together. See [Core Colang Concepts](../2_core_colang_concepts/README.md) for definitions of *messages* and *flows*.
+To control the greeting response, define the user and bot messages, and the flow that connects the two together. See [Core Colang Concepts](../2-core-colang-concepts/README.md) for definitions of *messages* and *flows*.
 
 1. Define the `greeting` user message by creating a *config/rails.co* file with the following content:
 
@@ -208,4 +208,4 @@ The Chat UI interface is now available at `http://localhost:8000`:
 
 ## Next
 
-The next guide, [Core Colang Concepts](../2_core_colang_concepts/README.md), explains the Colang concepts *messages* and *flows*.
+The next guide, [Core Colang Concepts](../2-core-colang-concepts/README.md), explains the Colang concepts *messages* and *flows*.

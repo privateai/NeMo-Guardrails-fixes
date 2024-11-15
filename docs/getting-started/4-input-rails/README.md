@@ -1,6 +1,6 @@
 # Input Rails
 
-This topic demonstrates how to add input rails to a guardrails configuration. As discussed in the previous guide, [Demo Use Case](../3_demo_use_case/README.md), this topic guides you through building the ABC Bot.
+This topic demonstrates how to add input rails to a guardrails configuration. As discussed in the previous guide, [Demo Use Case](../3-demo-use-case/README.md), this topic guides you through building the ABC Bot.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ models:
 
 ## General Instructions
 
-Configure the **general instructions** for the bot. You can think of them as the system prompt. For details, see the [Configuration Guide](../../user_guides/configuration-guide.md#general-instructions). These instructions configure the bot to answer questions about the employee handbook and the company's policies.
+Configure the **general instructions** for the bot. You can think of them as the system prompt. For details, see the [Configuration Guide](../../user-guides/configuration-guide.md#general-instructions). These instructions configure the bot to answer questions about the employee handbook and the company's policies.
 
 Add the following content to *config.yml* to create a **general instruction**:
 
@@ -55,7 +55,7 @@ In the snippet above, we instruct the bot to answer questions about the employee
 
 ## Sample Conversation
 
-Another option to influence how the LLM responds to a sample conversation. The sample conversation sets the tone for the conversation between the user and the bot. The sample conversation is included in the prompts, which are shown in a subsequent section. For details, see the [Configuration Guide](../../user_guides/configuration-guide.md#sample-conversation).
+Another option to influence how the LLM responds to a sample conversation. The sample conversation sets the tone for the conversation between the user and the bot. The sample conversation is included in the prompts, which are shown in a subsequent section. For details, see the [Configuration Guide](../../user-guides/configuration-guide.md#sample-conversation).
 
 Add the following to *config.yml* to create a **sample conversation**:
 
@@ -105,7 +105,7 @@ Summary: 1 LLM call(s) took 0.92 seconds and used 106 tokens.
 1. Task `general` took 0.92 seconds and used 106 tokens.
 ```
 
-The summary shows that a single call was made to the LLM using the prompt for the task `general`. In contrast to the [Core Colang Concepts guide](../2_core_colang_concepts/README.md), where the `generate_user_intent` task is used as a first phase for each user message, if no user canonical forms are defined for the Guardrails configuration, the `general` task is used instead. Take a closer look at the prompt and the completion:
+The summary shows that a single call was made to the LLM using the prompt for the task `general`. In contrast to the [Core Colang Concepts guide](../2-core-colang-concepts/README.md), where the `generate_user_intent` task is used as a first phase for each user message, if no user canonical forms are defined for the Guardrails configuration, the `general` task is used instead. Take a closer look at the prompt and the completion:
 
 ```python
 print(info.llm_calls[0].prompt)
@@ -152,7 +152,7 @@ If the bot does not know the answer to a question, it truthfully says it does no
 
 > **NOTE**: this jailbreak attempt does not work 100% of the time. If you're running this and getting a different result, try a few times, and you should get a response similar to the previous.
 
-Allowing the LLM to comply with this type of request is something we don't want. To prevent jailbreak attempts like this, you can add an input rail that can process the user input before it is sent to the LLM. NeMo Guardrails comes with a built-in [self check input](../../user_guides/guardrails-library.md#input-checking) rail that uses a separate LLM query to detect a jailbreak attempt. To use it, you have to:
+Allowing the LLM to comply with this type of request is something we don't want. To prevent jailbreak attempts like this, you can add an input rail that can process the user input before it is sent to the LLM. NeMo Guardrails comes with a built-in [self check input](../../user-guides/guardrails-library.md#input-checking) rail that uses a separate LLM query to detect a jailbreak attempt. To use it, you have to:
 
 1. Activate the `self check input` rail in *config.yml*.
 2. Add a `self_check_input` prompt in *prompts.yml*.
@@ -360,8 +360,8 @@ Feel free to experiment with various inputs that should or should not trigger th
 
 ## More on Input Rails
 
-Input rails also have the ability to alter the message from the user. By changing the value for the `$user_message` variable, the subsequent input rails and dialog rails work with the updated value. This can be useful, for example, to mask sensitive information. For an example of this behavior, checkout the [Sensitive Data Detection rails](../../user_guides/guardrails-library.md#presidio-based-sensitive-data-detection).
+Input rails also have the ability to alter the message from the user. By changing the value for the `$user_message` variable, the subsequent input rails and dialog rails work with the updated value. This can be useful, for example, to mask sensitive information. For an example of this behavior, checkout the [Sensitive Data Detection rails](../../user-guides/guardrails-library.md#presidio-based-sensitive-data-detection).
 
 ## Next
 
-The next guide, [Output Rails](../5_output_rails/README.md), adds output moderation to the bot.
+The next guide, [Output Rails](../5-output-rails/README.md), adds output moderation to the bot.
