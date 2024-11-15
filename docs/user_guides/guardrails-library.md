@@ -443,6 +443,7 @@ models:
       openai_api_base: "http://localhost:5005/v1"
       model_name: "meta-llama/Meta-Llama-Guard-2-8B"
 ```
+
 ```{note}
 The `type` is a unique idenfier for the model that will be passed to the input and output rails as a parameter.
 ```
@@ -725,21 +726,6 @@ rails:
 ```
 
 For more details, check out the [Private AI Integration](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/community/privateai.md) page.
-
-### GCP Text Moderation
-
-NeMo Guardrails supports using the GCP Text Moderation. You need to be authenticated with GCP, refer [here](https://cloud.google.com/docs/authentication/application-default-credentials) for auth details.
-
-#### Example usage
-
-```yaml
-rails:
-  input:
-    flows:
-      - gcpnlp moderation
-```
-
-For more details, check out the [GCP Text Moderation](./community/gcp-text-moderations.md) page.
 
 ### Private AI PII Detection
 
