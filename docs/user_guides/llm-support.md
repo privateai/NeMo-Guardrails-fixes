@@ -37,6 +37,8 @@ If you want to use an LLM and you cannot see a prompt in the [prompts folder](ht
 | Got It AI RAG TruthChecker _(LLM independent)_         | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:                 |
 | Patronus Lynx RAG Hallucination detection _(LLM independent)_         | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:                 |
 | GCP Text Moderation _(LLM independent)_         | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:                 |
+| Patronus Evaluate API _(LLM independent)_         | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark:        | :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:                 |
+
 
 Table legend:
 - :heavy_check_mark: - Supported (_The feature is fully supported by the LLM based on our experiments and tests_)
@@ -47,4 +49,4 @@ Table legend:
 The performance numbers reported in the table above for each LLM-feature pair are as follows:
 - the banking dataset evaluation for dialog (topical) rails
 - fact-checking using MSMARCO dataset and moderation rails experiments
-More details in the [evaluation docs](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/nemoguardrails/eval/README.md).
+More details in the [evaluation docs](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/nemoguardrails/evaluate/README.md).

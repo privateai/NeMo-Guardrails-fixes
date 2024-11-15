@@ -18,6 +18,7 @@
 import logging
 import os
 import warnings
+from enum import Enum
 from typing import Any, Dict, List, Optional, Set, Tuple, Union
 
 import yaml
@@ -51,7 +52,13 @@ colang_path_dirs = [
 standard_library_path = os.path.normpath(
     os.path.join(os.path.dirname(__file__), "..", "..", "colang", "v2_x", "library")
 )
+
+# nemoguardrails/lobrary
+guardrails_stdlib_path = os.path.normpath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..")
+)
 colang_path_dirs.append(standard_library_path)
+colang_path_dirs.append(guardrails_stdlib_path)
 
 
 class Model(BaseModel):
@@ -120,6 +127,36 @@ class SensitiveDataDetection(BaseModel):
     )
     retrieval: SensitiveDataDetectionOptions = Field(
         default_factory=SensitiveDataDetectionOptions,
+        description="Configuration of the entities to be detected on retrieved relevant chunks.",
+    )
+
+
+class PrivateAIDetectionOptions(BaseModel):
+    """Configuration options for Private AI."""
+
+    entities: List[str] = Field(
+        default_factory=list,
+        description="The list of entities that should be detected.",
+    )
+
+
+class PrivateAIDetection(BaseModel):
+    """Configuration for Private AI."""
+
+    server_endpoint: str = Field(
+        default="http://localhost:8080/process/text",
+        description="The endpoint for the private AI detection server.",
+    )
+    input: PrivateAIDetectionOptions = Field(
+        default_factory=PrivateAIDetectionOptions,
+        description="Configuration of the entities to be detected on the user input.",
+    )
+    output: PrivateAIDetectionOptions = Field(
+        default_factory=PrivateAIDetectionOptions,
+        description="Configuration of the entities to be detected on the bot output.",
+    )
+    retrieval: PrivateAIDetectionOptions = Field(
+        default_factory=PrivateAIDetectionOptions,
         description="Configuration of the entities to be detected on retrieved relevant chunks.",
     )
 
@@ -386,6 +423,54 @@ class AutoAlignRailConfig(BaseModel):
     )
 
 
+class PatronusEvaluationSuccessStrategy(str, Enum):
+    """
+    Strategy for determining whether a Patronus Evaluation API
+    request should pass, especially when multiple evaluators
+    are called in a single request.
+    ALL_PASS requires all evaluators to pass for success.
+    ANY_PASS requires only one evaluator to pass for success.
+    """
+
+    ALL_PASS = "all_pass"
+    ANY_PASS = "any_pass"
+
+
+class PatronusEvaluateApiParams(BaseModel):
+    """Config to parameterize the Patronus Evaluate API call"""
+
+    success_strategy: Optional[PatronusEvaluationSuccessStrategy] = Field(
+        default=PatronusEvaluationSuccessStrategy.ALL_PASS,
+        description="Strategy to determine whether the Patronus Evaluate API Guardrail passes or not.",
+    )
+    params: Dict[str, Any] = Field(
+        default_factory=dict,
+        description="Parameters to the Patronus Evaluate API",
+    )
+
+
+class PatronusEvaluateConfig(BaseModel):
+    """Config for the Patronus Evaluate API call"""
+
+    evaluate_config: PatronusEvaluateApiParams = Field(
+        default_factory=PatronusEvaluateApiParams,
+        description="Configuration passed to the Patronus Evaluate API",
+    )
+
+
+class PatronusRailConfig(BaseModel):
+    """Configuration data for the Patronus Evaluate API"""
+
+    input: Optional[PatronusEvaluateConfig] = Field(
+        default_factory=PatronusEvaluateConfig,
+        description="Patronus Evaluate API configuration for an Input Guardrail",
+    )
+    output: Optional[PatronusEvaluateConfig] = Field(
+        default_factory=PatronusEvaluateConfig,
+        description="Patronus Evaluate API configuration for an Output Guardrail",
+    )
+
+
 class RailsConfigData(BaseModel):
     """Configuration data for specific rails that are supported out-of-the-box."""
 
@@ -399,6 +484,11 @@ class RailsConfigData(BaseModel):
         description="Configuration data for the AutoAlign guardrails API.",
     )
 
+    patronus: Optional[PatronusRailConfig] = Field(
+        default_factory=PatronusRailConfig,
+        description="Configuration data for the Patronus Evaluate API.",
+    )
+
     sensitive_data_detection: Optional[SensitiveDataDetection] = Field(
         default_factory=SensitiveDataDetection,
         description="Configuration for detecting sensitive data.",
@@ -407,6 +497,11 @@ class RailsConfigData(BaseModel):
     jailbreak_detection: Optional[JailbreakDetectionConfig] = Field(
         default_factory=JailbreakDetectionConfig,
         description="Configuration for jailbreak detection.",
+    )
+
+    privateai: Optional[PrivateAIDetection] = Field(
+        default_factory=PrivateAIDetection,
+        description="Configuration for Private AI.",
     )
 
 
@@ -653,7 +748,10 @@ def _load_imported_paths(raw_config: dict, colang_files: List[Tuple[str, str]]):
                 actual_path = import_path
 
             if actual_path is None:
-                raise ValueError(f"Import path `{import_path}` could not be resolved.")
+                formated_import_path = import_path.replace("/", ".")
+                raise ValueError(
+                    f"Import path '{formated_import_path}' could not be resolved.",
+                )
 
             _raw_config, _colang_files = _load_path(actual_path)
 

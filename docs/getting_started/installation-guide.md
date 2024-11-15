@@ -52,7 +52,7 @@ To experiment with NeMo Guardrails from scratch, use a fresh virtual environment
  > source venv/bin/activate
  ```
 
- ### Setting up a virtual environment on Windows
+### Setting up a virtual environment on Windows
 
 1. Open a new CMD prompt (Windows Key + R, **cmd.exe**)
 2. Install **virtualenv** using the command `pip install virtualenv`
@@ -104,6 +104,15 @@ To keep the footprint of `nemoguardrails` as small as possible, these are not in
 
 ## Optional dependencies
 
+> [!IMPORTANT]
+> If pip fails to resolve dependencies when running `pip install nemoguardrails[all]`, you should specify additional constraints directly in the `pip install` command.
+>
+> **Example Command**:
+>
+> ```sh
+> pip install "nemoguardrails[all]" "pandas>=1.4.0,<3"
+> ```
+
 To use OpenAI, just use the `openai` extra dependency that ensures that all required packages are installed.
 Make sure the `OPENAI_API_KEY` environment variable is set,
 as shown in the following example, where *YOUR_KEY* is your OpenAI key.
@@ -111,7 +120,7 @@ as shown in the following example, where *YOUR_KEY* is your OpenAI key.
  ```bash
  > pip install nemoguardrails[openai]
  > export OPENAI_API_KEY=YOUR_KEY
- ```
+```
 
 Some NeMo Guardrails LLMs and features have specific installation requirements, including a more complex set of steps. For example, [AlignScore](../user_guides/advanced/align_score_deployment.md) fact-checking, using [Llama-2](../../examples/configs/llm/hf_pipeline_llama2/README.md) requires two additional packages.
 For each feature or LLM example, check the readme file associated with it.
@@ -122,6 +131,6 @@ NeMo Guardrails can also be used through Docker. For details on how to build and
 
 ## What's next?
 
-* Check out the [Getting Started Guide](../getting_started/README.md) and start with the ["Hello World" example](../getting_started/1_hello_world/README.md).
-* Explore more examples in the [examples](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples) folder.
-* Review the [User Guides](../README.md).
+- Check out the [Getting Started Guide](../getting_started/README.md) and start with the ["Hello World" example](../getting_started/1_hello_world/README.md).
+- Explore more examples in the [examples](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop/examples) folder.
+- Review the [User Guides](../README.md).

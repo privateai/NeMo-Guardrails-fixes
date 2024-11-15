@@ -906,7 +906,7 @@ class LLMGenerationActions:
 
                 if streaming_handler:
                     # TODO: Figure out a more generic way to deal with this
-                    if prompt_config.output_parser == "verbose_v1":
+                    if prompt_config.output_parser in ["verbose_v1", "bot_message"]:
                         streaming_handler.set_pattern(
                             prefix='Bot message: "', suffix='"'
                         )
