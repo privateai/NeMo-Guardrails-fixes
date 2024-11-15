@@ -1,5 +1,8 @@
 # Got It AI Integration
 
+!!! warning "Deprecation Notice"
+    The Got It AI integration has been deprecated and will be discontinued on 15th December, 2024.
+
 NeMo Guardrails integrates with [Got It AI's Hallucination Manager](https://www.app.got-it.ai/hallucination-manager) for hallucination detection in RAG systems. The Hallucination Manager's TruthChecker API is designed to detect and manage hallucinations in AI models, specifically for real-world RAG applications.
 
 Existing fact-checking methods are not sufficient to detect hallucinations in AI models for real-world RAG applications. The TruthChecker API performs a dual task to determine whether a response is a `hallucination` or not:

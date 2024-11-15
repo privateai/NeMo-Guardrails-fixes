@@ -610,6 +610,9 @@ For more details, check out the [ActiveFence Integration](./community/active-fen
 
 ### Got It AI
 
+!!! warning "Deprecation Notice"
+    The Got It AI integration has been deprecated and will be discontinued on 15th December, 2024.
+
 NeMo Guardrails integrates with [Got It AI's Hallucination Manager](https://www.app.got-it.ai/hallucination-manager) for hallucination detection in RAG systems. To integrate the TruthChecker API with NeMo Guardrails, the `GOTITAI_API_KEY` environment variable needs to be set.
 
 #### Example usage
