@@ -5,13 +5,13 @@ Detailed below are steps to self-host Llama Guard using vLLM and HuggingFace. Al
 1. Get access to the Llama Guard model from Meta on HuggingFace. See [this page](https://huggingface.co/meta-llama/LlamaGuard-7b) for more details.
 
 2. Log in to Hugging Face with your account token
-```
+```sh
 huggingface-cli login
 ```
 
 3. Here, we use vLLM to host a Llama Guard inference endpoint in the OpenAI-compatible mode.
 
-```
+```sh
 pip install vllm
 python -m vllm.entrypoints.openai.api_server --port 5123 --model meta-llama/LlamaGuard-7b
 ```

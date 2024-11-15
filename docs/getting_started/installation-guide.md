@@ -10,7 +10,7 @@ This guide walks you through the following steps to install NeMo Guardrails:
 
 ## Prerequisites
 
-Python 3.9, 3.10 or 3.11.
+- Python 3.9, 3.10, or 3.11
 
 ## Additional dependencies
 
@@ -35,21 +35,21 @@ To experiment with NeMo Guardrails from scratch, use a fresh virtual environment
 
 1. Create a folder, such as *my_assistant*, for your project.
 
- ```bash
- > mkdir my_assistant
- > cd my_assistant
+ ```sh
+ mkdir my_assistant
+ cd my_assistant
  ```
 
 2. Create a virtual environment.
 
- ```bash
- > python3 -m venv venv
+ ```sh
+ python3 -m venv venv
  ```
 
 3. Activate the virtual environment.
 
- ```bash
- > source venv/bin/activate
+ ```sh
+ source venv/bin/activate
  ```
 
 ### Setting up a virtual environment on Windows
@@ -65,8 +65,8 @@ Use the `mkvirtualenv` *name* command to activate a new virtual environment call
 
 Install NeMo Guardrails using **pip**:
 
- ```bash
- > pip install nemoguardrails
+ ```sh
+ pip install nemoguardrails
  ```
 
 ## Installing from source code
@@ -75,13 +75,13 @@ NeMo Guardrails is under active development and the main branch always contains 
 
 1. Clone the repository:
 
-   ```
+   ```sh
    git clone https://github.com/NVIDIA/NeMo-Guardrails.git
    ```
 
 2. Install the package locally:
 
-   ```
+   ```sh
    cd NeMo-Guardrails
    pip install -e .
    ```
@@ -98,7 +98,7 @@ The `nemoguardrails` package also defines the following extra dependencies:
 
 To keep the footprint of `nemoguardrails` as small as possible, these are not installed by default. To install any of the extra dependency you can use **pip** as well. For example, to install the `dev` extra dependencies, run the following command:
 
-```bash
+```sh
 > pip install nemoguardrails[dev]
 ```
 
@@ -107,7 +107,7 @@ To keep the footprint of `nemoguardrails` as small as possible, these are not in
 ```{warning}
 If pip fails to resolve dependencies when running `pip install nemoguardrails[all]`, you should specify additional constraints directly in the `pip install` command.
 
-**Example Command**:
+Example Command:
 
 ```sh
 pip install "nemoguardrails[all]" "pandas>=1.4.0,<3"
@@ -117,9 +117,9 @@ To use OpenAI, just use the `openai` extra dependency that ensures that all requ
 Make sure the `OPENAI_API_KEY` environment variable is set,
 as shown in the following example, where *YOUR_KEY* is your OpenAI key.
 
- ```bash
- > pip install nemoguardrails[openai]
- > export OPENAI_API_KEY=YOUR_KEY
+ ```zsh
+ pip install nemoguardrails[openai]
+ export OPENAI_API_KEY=YOUR_KEY
 ```
 
 Some NeMo Guardrails LLMs and features have specific installation requirements, including a more complex set of steps. For example, [AlignScore](../user_guides/advanced/align_score_deployment.md) fact-checking, using [Llama-2](../../examples/configs/llm/hf_pipeline_llama2/README.md) requires two additional packages.

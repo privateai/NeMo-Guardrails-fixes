@@ -41,7 +41,7 @@ nest_asyncio.apply()
 
 In this guide, the server is started programmatically, as shown below. This is equivalent to (from the root of the project):
 
-```bash
+```sh
 nemoguardrails server --config=examples/server_configs/atomic
 ```
 

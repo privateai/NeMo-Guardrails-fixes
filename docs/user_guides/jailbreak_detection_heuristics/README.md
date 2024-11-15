@@ -16,19 +16,19 @@ Make sure to check that the prerequisites for the ABC bot are satisfied.
 
 1. Install the `openai` package:
 
-```bash
+```sh
 pip install openai
 ```
 
 2. Set the `OPENAI_API_KEY` environment variable:
 
-```bash
+```sh
 export OPENAI_API_KEY=$OPENAI_API_KEY    # Replace with your own key
 ```
 
 3. Install the following packages to test the jailbreak detection heuristics locally:
 
-```bash
+```sh
 pip install transformers torch
 ```
 
