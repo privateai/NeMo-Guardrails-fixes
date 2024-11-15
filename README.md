@@ -8,7 +8,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![arXiv](https://img.shields.io/badge/arXiv-2310.10501-b31b1b.svg)](https://arxiv.org/abs/2310.10501)
 
-> **LATEST RELEASE / DEVELOPMENT VERSION**: The [main](https://github.com/NVIDIA/NeMo-Guardrails/tree/main) branch tracks the latest released beta version: [0.10.1](https://github.com/NVIDIA/NeMo-Guardrails/tree/v0.10.1). For the latest development version, checkout the [develop](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop) branch.
+> **LATEST RELEASE / DEVELOPMENT VERSION**: The [main](https://github.com/NVIDIA/NeMo-Guardrails/tree/main) branch tracks the latest released beta version: [0.11.0](https://github.com/NVIDIA/NeMo-Guardrails/tree/v0.11.0). For the latest development version, checkout the [develop](https://github.com/NVIDIA/NeMo-Guardrails/tree/develop) branch.
 
 > **DISCLAIMER**: The beta release is undergoing active development and may be subject to changes and improvements, which could cause instability and unexpected behavior. We currently do not recommend deploying this beta version in a production setting. We appreciate your understanding and contribution during this stage. Your support and feedback are invaluable as we advance toward creating a robust, ready-for-production LLM guardrails toolkit. The examples provided within the documentation are for educational purposes to get started with NeMo Guardrails, and are not meant for use in production applications.
 
@@ -101,7 +101,7 @@ The input and output format for the `generate` method is similar to the [Chat Co
 
 #### Async API
 
-NeMo Guardrails is an async-first toolkit, which means that the core mechanics are implemented using the Python async model. The public methods have both a sync and an async version, such as `LLMRails.generate` and `LLMRails.generate_async`.
+NeMo Guardrails is an async-first toolkit as the core mechanics are implemented using the Python async model. The public methods have both a sync and an async version. For example: `LLMRails.generate` and `LLMRails.generate_async`.
 
 ### Supported LLMs
 
@@ -210,7 +210,9 @@ define flow
 
 To configure and implement various types of guardrails, this toolkit introduces **Colang**, a modeling language specifically created for designing flexible, yet controllable, dialogue flows. Colang has a python-like syntax and is designed to be simple and intuitive, especially for developers.
 
-**NOTE**: Currently two versions of Colang, 1.0 and 2.0, are supported and Colang 1.0 is the default. Versions 0.1.0 up to 0.7.1 of NeMo Guardrails used Colang 1.0 exclusively. Versions 0.8.0 introduced Colang 2.0-alpha and version 0.9.0 introduced Colang 2.0-beta. We expect Colang 2.0 to go out of Beta and replace 1.0 as the default option in NeMo Guardrails version 0.11.0.
+```{note}
+Currently two versions of Colang, 1.0 and 2.0, are supported and Colang 1.0 is the default. Versions 0.1.0 up to 0.7.1 of NeMo Guardrails used Colang 1.0 exclusively. Versions 0.8.0 introduced Colang 2.0-alpha and version 0.9.0 introduced Colang 2.0-beta. We expect Colang 2.0 to go out of Beta and replace 1.0 as the default option in NeMo Guardrails version 0.12.0.
+```
 
 For a brief introduction to the Colang 1.0 syntax, see the [Colang 1.0 Language Syntax Guide](https://docs.nvidia.com/nemo/guardrails/user-guides/colang-language-syntax-guide.html).
 
@@ -220,9 +222,11 @@ To get started with Colang 2.0, see the [Colang 2.0 Documentation](https://docs.
 
 NeMo Guardrails comes with a set of [built-in guardrails](https://docs.nvidia.com/nemo/guardrails/user-guides/guardrails-library.html).
 
-> **NOTE**: The built-in guardrails are only intended to enable you to get started quickly with NeMo Guardrails. For production use cases, further development and testing of the rails are needed.
+```{note}
+The built-in guardrails are only intended to enable you to get started quickly with NeMo Guardrails. For production use cases, further development and testing of the rails are needed.
+```
 
-Currently, the guardrails library includes:
+Currently, the NeMo Guardrails library includes guardrails for:
 
 - [Jailbreak Detection](https://docs.nvidia.com/nemo/guardrails/user-guides/guardrails-library.html#jailbreak-detection-heuristics)
 - [Self-Check Input Moderation](https://docs.nvidia.com/nemo/guardrails/user-guides/guardrails-library.html#self-input-output)
