@@ -81,6 +81,8 @@ Current limitations (to be fixed in NeMo Guardrails v0.10.0):
 - Guardrails Library is not yet usable from within Colang 2.0.
 - Generation options not supported, e.g. log activated rails, etc.
 
+.. _colang_migration_from_version_2_alpha_to_beta:
+
 Migration from alpha to beta version
 ------------------------------------
 
