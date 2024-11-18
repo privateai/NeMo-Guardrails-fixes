@@ -42,6 +42,10 @@ The changes related to the Colang language and runtime have moved to [CHANGELOG-
 - **Documentation Restructuring**: Restructure the docs and several style enhancements ([#855](https://github.com/NVIDIA/NeMo-Guardrails/pull/855)) by @Pouyanpi
 - **Got It AI deprecation**: Add deprecation notice for Got It AI integration ([#857](https://github.com/NVIDIA/NeMo-Guardrails/pull/857)) by @mlmonk
 
+## [0.10.1] - 2024-10-02
+
+- ???
+
 ## [0.10.0] - 2024-09-27
 
 ### Added

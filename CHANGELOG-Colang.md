@@ -4,7 +4,30 @@ All notable changes to the Colang language and runtime will be documented in thi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0-beta.3] - Unreleased
+## [2.0-beta.5] - 2024-11-18
+
+### Added
+
+* [#811](https://github.com/NVIDIA/NeMo-Guardrails/pull/811) Prompt template name to verbose logging.
+* [#823](https://github.com/NVIDIA/NeMo-Guardrails/pull/823) New configuration setting to change UMIM event source id.
+* [#829](https://github.com/NVIDIA/NeMo-Guardrails/pull/829) New attention module to standard library.
+
+### Fixed
+
+* [#758](https://github.com/NVIDIA/NeMo-Guardrails/pull/758) Activation of flows with default parameters.
+* [#759](https://github.com/NVIDIA/NeMo-Guardrails/pull/759) ``pretty_str`` string formatting function.
+* [#760](https://github.com/NVIDIA/NeMo-Guardrails/pull/760) Consistent uuid generation in debug mode.
+* [#771](https://github.com/NVIDIA/NeMo-Guardrails/pull/771) Avatar posture management function in standard library
+* [#833](https://github.com/NVIDIA/NeMo-Guardrails/pull/833) Nested ``if else`` construct parsing.
+* [#765](https://github.com/NVIDIA/NeMo-Guardrails/pull/765) Multiline string values in interaction history prompting.
+
+## [2.0-beta.4] - 2024-10-02
+
+### Fixed
+
+* [#775](https://github.com/NVIDIA/NeMo-Guardrails/pull/775) LLM prompt template ``generate_value_from_instruction`` for GTP and LLama model chat interface
+
+## [2.0-beta.3] - 2024-09-27
 
 ### Added
 
