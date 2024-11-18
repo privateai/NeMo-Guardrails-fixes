@@ -2,7 +2,7 @@
 
 This example contains configuration files for using Private AI in your NeMo Guardrails project.
 
-For more details on the Private AI integration, see [Private AI Integration User Guide](../../../docs/user_guides/community/privateai.md).
+For more details on the Private AI integration, see [Private AI Integration User Guide](../../../docs/user-guides/community/privateai.md).
 
 ## Structure
 

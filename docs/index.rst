@@ -8,20 +8,20 @@ NVIDIA NeMo Guardrails
 
    introduction.md
    documentation.md
-   getting_started/installation-guide
+   getting-started/installation-guide
 
 .. toctree::
    :caption: Getting Started
    :name: Getting Started
    :maxdepth: 2
 
-   getting_started/1_hello_world/README
-   getting_started/2_core_colang_concepts/README
-   getting_started/3_demo_use_case/README
-   getting_started/4_input_rails/README
-   getting_started/5_output_rails/README
-   getting_started/6_topical_rails/README
-   getting_started/7_rag/README
+   getting-started/1-hello-world/README
+   getting-started/2-core-colang-concepts/README
+   getting-started/3-demo-use-case/README
+   getting-started/4-input-rails/README
+   getting-started/5-output-rails/README
+   getting-started/6-topical-rails/README
+   getting-started/7-rag/README
 
 .. toctree::
    :caption: Colang 2.0
@@ -38,19 +38,19 @@ NVIDIA NeMo Guardrails
    :name: User Guides
    :maxdepth: 2
 
-   user_guides/configuration-guide
-   user_guides/guardrails-library
-   user_guides/guardrails-process
-   user_guides/colang-language-syntax-guide
-   user_guides/llm-support
-   user_guides/python-api
-   user_guides/cli
-   user_guides/server-guide
-   user_guides/langchain/index
-   user_guides/detailed_logging/index
-   user_guides/jailbreak_detection_heuristics/index
-   user_guides/llm/index
-   user_guides/multi_config_api/index
+   user-guides/configuration-guide
+   user-guides/guardrails-library
+   user-guides/guardrails-process
+   user-guides/colang-language-syntax-guide
+   user-guides/llm-support
+   user-guides/python-api
+   user-guides/cli
+   user-guides/server-guide
+   user-guides/langchain/index
+   user-guides/detailed-logging/index
+   user-guides/jailbreak-detection-heuristics/index
+   user-guides/llm/index
+   user-guides/multi-config-api/index
 
 .. toctree::
    :caption: Security
@@ -73,19 +73,19 @@ NVIDIA NeMo Guardrails
    :name: Advanced User Guides
    :maxdepth: 2
 
-   user_guides/advanced/generation-options
-   user_guides/advanced/prompt-customization
-   user_guides/advanced/embedding-search-providers
-   user_guides/advanced/using-docker
-   user_guides/advanced/streaming
-   user_guides/advanced/align-score-deployment
-   user_guides/advanced/extract-user-provided-values
-   user_guides/advanced/bot-message-instructions
-   user_guides/advanced/event-based-api
-   user_guides/advanced/jailbreak-detection-heuristics-deployment
-   user_guides/advanced/llama-guard-deployment
-   user_guides/advanced/nested-async-loop
-   user_guides/advanced/vertexai-setup
+   user-guides/advanced/generation-options
+   user-guides/advanced/prompt-customization
+   user-guides/advanced/embedding-search-providers
+   user-guides/advanced/using-docker
+   user-guides/advanced/streaming
+   user-guides/advanced/align-score-deployment
+   user-guides/advanced/extract-user-provided-values
+   user-guides/advanced/bot-message-instructions
+   user-guides/advanced/event-based-api
+   user-guides/advanced/jailbreak-detection-heuristics-deployment
+   user-guides/advanced/llama-guard-deployment
+   user-guides/advanced/nested-async-loop
+   user-guides/advanced/vertexai-setup
 
 .. toctree::
    :caption: Other
