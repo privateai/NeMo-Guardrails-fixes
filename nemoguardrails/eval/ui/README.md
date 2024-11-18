@@ -14,6 +14,7 @@ Below is a getting started guide for the `nemoguardrails eval` CLI.
 ## Run Evaluations
 
 To run a new evaluation with a guardrail configuration:
+
 ```bash
 nemoguardrails eval run -g <GUARDRAIL_CONFIG_PATH> -o <OUTPUT_PATH>
 ```
@@ -35,7 +36,7 @@ models:
     model: gpt-4
 
   - type: llm-judge
-    engine: nvidia-ai-endpoints
+    engine: nvidia_ai_endpoints
     model: meta/llama3-8b-instruct
 ```
 

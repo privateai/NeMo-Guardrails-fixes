@@ -117,7 +117,7 @@ To use OpenAI, just use the `openai` extra dependency that ensures that all requ
 Make sure the `OPENAI_API_KEY` environment variable is set,
 as shown in the following example, where *YOUR_KEY* is your OpenAI key.
 
- ```zsh
+ ```sh
  pip install nemoguardrails[openai]
  export OPENAI_API_KEY=YOUR_KEY
 ```
