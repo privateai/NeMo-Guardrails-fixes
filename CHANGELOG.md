@@ -44,7 +44,7 @@ The changes related to the Colang language and runtime have moved to [CHANGELOG-
 
 ## [0.10.1] - 2024-10-02
 
-- Colang 2.0-beta.4 patch fix
+- Colang 2.0-beta.4 patch
 
 ## [0.10.0] - 2024-09-27
 
