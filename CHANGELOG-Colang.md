@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 * Prompt template name to verbose logging ([#811](https://github.com/NVIDIA/NeMo-Guardrails/pull/811)) by @schuellc-nvidia
 * New configuration setting to change UMIM event source id ([#823](https://github.com/NVIDIA/NeMo-Guardrails/pull/823)) by @sklinglernv
 * New attention module to standard library ([#829](https://github.com/NVIDIA/NeMo-Guardrails/pull/829)) by @sklinglernv
+* Passthrough mode support ([#779](https://github.com/NVIDIA/NeMo-Guardrails/pull/779)) by @Pouyanpi
 
 ### Fixed
 
