@@ -7,20 +7,59 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 NOTE:
 The changes related to the Colang language and runtime have moved to [CHANGELOG-Colang](./CHANGELOG-Colang.md) file.
 
-## [0.10.0] - 2024-09-23
+## [0.11.0] - 2024-11-18
+
+### Added
+
+- **Observability**: Add observability support with support for different backends ([#844](https://github.com/NVIDIA/NeMo-Guardrails/pull/844)) by @Pouyanpi
+- **Private AI Integration**: Add Private AI Integration ([#815](https://github.com/NVIDIA/NeMo-Guardrails/pull/815)) by @letmerecall
+- **Patronus Evaluate API Integration**: Patronus Evaluate API Integration ([#834](https://github.com/NVIDIA/NeMo-Guardrails/pull/834)) by @varjoshi
+- **railsignore**: Add support for .railsignore file ([#846](https://github.com/NVIDIA/NeMo-Guardrails/pull/790)) by @ajanitshimanga
+
+### Changed
+
+- **Sandboxed Environment in Jinja2**: Add sandboxed environment in Jinja2 ([#799](https://github.com/NVIDIA/NeMo-Guardrails/pull/799)) by @Pouyanpi
+- **Langchain 3 support**: Upgrade LangChain to Version 0.3 ([#784](https://github.com/NVIDIA/NeMo-Guardrails/pull/784)) by @Pouyanpi
+- **Python 3.8**: Drop support for Python 3.8 ([#803](https://github.com/NVIDIA/NeMo-Guardrails/pull/803)) by @Pouyanpi
+- **vllm**: Bump vllm from 0.2.7 to 0.5.5 for llama_guard and patronusai([#836](https://github.com/NVIDIA/NeMo-Guardrails/pull/836))
+
+### Fixed
+
+- **Guardrails Library documentation**": Fix a typo in guardrails library documentation ([#793](https://github.com/NVIDIA/NeMo-Guardrails/pull/793)) by @vedantnaik19
+- **Contributing Guide**: Fix incorrect folder name & pre-commit setup in CONTRIBUTING.md ([#800](https://github.com/NVIDIA/NeMo-Guardrails/pull/800))
+- **Contributing Guide**: Added correct Python command version in documentation([#801](https://github.com/NVIDIA/NeMo-Guardrails/pull/801)) by @ravinder-tw
+- **retrieve chunk action**: Fix presence of new line in retrieve chunk action ([#809](https://github.com/NVIDIA/NeMo-Guardrails/pull/809)) by @Pouyanpi
+- **Standard Library import**: Fix guardrails standard library import path in Colang 2.0 ([#835](https://github.com/NVIDIA/NeMo-Guardrails/pull/835)) by @Pouyanpi
+- **AlignScore Dockerfile**: Add nltk's punkt_tab in align_score Dockerfile ([#841](https://github.com/NVIDIA/NeMo-Guardrails/pull/841)) by @yonromai
+- **Eval dependencies**: Make pandas version constraint explicit for eval optional dependency ([#847](https://github.com/NVIDIA/NeMo-Guardrails/pull/847)) by @Pouyanpi
+- **tests**: Mock PromptSession to prevent console error ([#851](https://github.com/NVIDIA/NeMo-Guardrails/pull/851)) by @Pouyanpi
+- **Streaming*: Handle multiple output parsers in generation ([#854](https://github.com/NVIDIA/NeMo-Guardrails/pull/854)) by @Pouyanpi
+
+### Documentation
+
+- **User Guide**: Update role from bot to assistant ([#852](https://github.com/NVIDIA/NeMo-Guardrails/pull/852)) by @Pouyanpi
+- **Installation Guide**: Update optional dependencies install ([#853](https://github.com/NVIDIA/NeMo-Guardrails/pull/853)) by @Pouyanpi
+- **Documentation Restructuring**: Restructure the docs and several style enhancements ([#855](https://github.com/NVIDIA/NeMo-Guardrails/pull/855)) by @Pouyanpi
+- **Got It AI deprecation**: Add deprecation notice for Got It AI integration ([#857](https://github.com/NVIDIA/NeMo-Guardrails/pull/857)) by @mlmonk
+
+## [0.10.1] - 2024-10-02
+
+- Colang 2.0-beta.4 patch
+
+## [0.10.0] - 2024-09-27
 
 ### Added
 
 - **content safety**: Implement content safety module ([#674](https://github.com/NVIDIA/NeMo-Guardrails/pull/674)) by @Pouyanpi
 - **migration tool**: Enhance migration tool capabilities ([#624](https://github.com/NVIDIA/NeMo-Guardrails/pull/624)) by @Pouyanpi
 - **Cleanlab Integration**: Add Cleanlab's Trustworthiness Score ([#572](https://github.com/NVIDIA/NeMo-Guardrails/pull/572)) by @AshishSardana
-- **colang 2**: LLM chat interface development ([#709](https://github.com/NVIDIA/NeMo-Guardrails/pull/709)) by @schuellc-nvidia
-- **embeddings**: Add relevant chunk support to colang 2 ([#708](https://github.com/NVIDIA/NeMo-Guardrails/pull/708)) by @Pouyanpi
-- **library**: Migrate Cleanlab to colang 2 and add exception handling ([#714](https://github.com/NVIDIA/NeMo-Guardrails/pull/714)) by @Pouyanpi
-- **colang debug library**: Develop debugging tools for colang ([#560](https://github.com/NVIDIA/NeMo-Guardrails/pull/560)) by @schuellc-nvidia
+- **Colang 2**: LLM chat interface development ([#709](https://github.com/NVIDIA/NeMo-Guardrails/pull/709)) by @schuellc-nvidia
+- **embeddings**: Add relevant chunk support to Colang 2 ([#708](https://github.com/NVIDIA/NeMo-Guardrails/pull/708)) by @Pouyanpi
+- **library**: Migrate Cleanlab to Colang 2 and add exception handling ([#714](https://github.com/NVIDIA/NeMo-Guardrails/pull/714)) by @Pouyanpi
+- **Colang debug library**: Develop debugging tools for Colang ([#560](https://github.com/NVIDIA/NeMo-Guardrails/pull/560)) by @schuellc-nvidia
 - **debug CLI**: Extend debugging command-line interface ([#717](https://github.com/NVIDIA/NeMo-Guardrails/pull/717)) by @schuellc-nvidia
 - **embeddings**: Add support for embeddings only with search threshold ([#733](https://github.com/NVIDIA/NeMo-Guardrails/pull/733)) by @Pouyanpi
-- **embeddings**: Add embedding-only support to colang 2 ([#737](https://github.com/NVIDIA/NeMo-Guardrails/pull/737)) by @Pouyanpi
+- **embeddings**: Add embedding-only support to Colang 2 ([#737](https://github.com/NVIDIA/NeMo-Guardrails/pull/737)) by @Pouyanpi
 - **embeddings**: Add relevant chunks prompts ([#745](https://github.com/NVIDIA/NeMo-Guardrails/pull/745)) by @Pouyanpi
 - **gcp moderation**: Implement GCP-based moderation tools ([#727](https://github.com/NVIDIA/NeMo-Guardrails/pull/727)) by @kauabh
 - **migration tool**: Sample conversation syntax conversion ([#764](https://github.com/NVIDIA/NeMo-Guardrails/pull/764)) by @Pouyanpi
@@ -48,7 +87,7 @@ The changes related to the Colang language and runtime have moved to [CHANGELOG-
 - **prompt override**: Fix override prompt self-check facts ([#621](https://github.com/NVIDIA/NeMo-Guardrails/pull/621)) by @Pouyanpi
 - **output parser**: Resolve deprecation warning in output parser ([#691](https://github.com/NVIDIA/NeMo-Guardrails/pull/691)) by @Pouyanpi
 - **patch**: Fix langchain_nvidia_ai_endpoints patch ([#697](https://github.com/NVIDIA/NeMo-Guardrails/pull/697)) by @Pouyanpi
-- **runtime issues**: Address colang 2 runtime issues ([#699](https://github.com/NVIDIA/NeMo-Guardrails/pull/699)) by @schuellc-nvidia
+- **runtime issues**: Address Colang 2 runtime issues ([#699](https://github.com/NVIDIA/NeMo-Guardrails/pull/699)) by @schuellc-nvidia
 - **send event**: Change 'send event' to 'send' ([#701](https://github.com/NVIDIA/NeMo-Guardrails/pull/701)) by @Pouyanpi
 - **output parser**: Fix output parser validation ([#704](https://github.com/NVIDIA/NeMo-Guardrails/pull/704)) by @Pouyanpi
 - **passthrough_fn**: Pass config and kwargs to passthrough_fn runnable ([#695](https://github.com/NVIDIA/NeMo-Guardrails/pull/695)) by @vpr1995
@@ -397,7 +436,7 @@ Documentation:
 - Fixed the Cohere prompt templates.
 - [#55](https://github.com/NVIDIA/NeMo-Guardrails/issues/83): Fix bug related to LangChain callbacks initialization.
 - Fixed generation of "..." on value generation.
-- Fixed the parameters type conversion when invoking actions from colang (previously everything was string).
+- Fixed the parameters type conversion when invoking actions from Colang (previously everything was string).
 - Fixed `model_kwargs` property for the `WrapperLLM`.
 - Fixed bug when `stop` was used inside flows.
 - Fixed Chat UI bug when an invalid guardrails configuration was used.
