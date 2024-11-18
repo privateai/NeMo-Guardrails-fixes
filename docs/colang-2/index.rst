@@ -12,5 +12,5 @@ Colang (|VERSION|)
 
    overview
    whats-changed
-   getting_started/index
-   language_reference/index
+   getting-started/index
+   language-reference/index
