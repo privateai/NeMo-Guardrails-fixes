@@ -8,43 +8,43 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-* [#811](https://github.com/NVIDIA/NeMo-Guardrails/pull/811) Prompt template name to verbose logging.
-* [#823](https://github.com/NVIDIA/NeMo-Guardrails/pull/823) New configuration setting to change UMIM event source id.
-* [#829](https://github.com/NVIDIA/NeMo-Guardrails/pull/829) New attention module to standard library.
+* Prompt template name to verbose logging ([#811](https://github.com/NVIDIA/NeMo-Guardrails/pull/811)) by @schuellc-nvidia
+* New configuration setting to change UMIM event source id ([#823](https://github.com/NVIDIA/NeMo-Guardrails/pull/823)) by @sklinglernv
+* New attention module to standard library ([#829](https://github.com/NVIDIA/NeMo-Guardrails/pull/829)) by @sklinglernv
 
 ### Fixed
 
-* [#758](https://github.com/NVIDIA/NeMo-Guardrails/pull/758) Activation of flows with default parameters.
-* [#759](https://github.com/NVIDIA/NeMo-Guardrails/pull/759) ``pretty_str`` string formatting function.
-* [#760](https://github.com/NVIDIA/NeMo-Guardrails/pull/760) Consistent uuid generation in debug mode.
-* [#771](https://github.com/NVIDIA/NeMo-Guardrails/pull/771) Avatar posture management function in standard library
-* [#833](https://github.com/NVIDIA/NeMo-Guardrails/pull/833) Nested ``if else`` construct parsing.
-* [#765](https://github.com/NVIDIA/NeMo-Guardrails/pull/765) Multiline string values in interaction history prompting.
+* Activation of flows with default parameters ([#758](https://github.com/NVIDIA/NeMo-Guardrails/pull/758)) by @schuellc-nvidia
+* ``pretty_str`` string formatting function ([#759](https://github.com/NVIDIA/NeMo-Guardrails/pull/759)) by @schuellc-nvidia
+* Consistent uuid generation in debug mode ([#760](https://github.com/NVIDIA/NeMo-Guardrails/pull/760)) by @schuellc-nvidia
+* Avatar posture management function in standard library ([#771](https://github.com/NVIDIA/NeMo-Guardrails/pull/771)) by @sklinglernv
+* Nested ``if else`` construct parsing ([#833](https://github.com/NVIDIA/NeMo-Guardrails/pull/833)) by @radinshayanfar
+* Multiline string values in interaction history prompting ([#765](https://github.com/NVIDIA/NeMo-Guardrails/pull/765)) by @radinshayanfar
 
 ## [2.0-beta.4] - 2024-10-02
 
 ### Fixed
 
-* [#775](https://github.com/NVIDIA/NeMo-Guardrails/pull/775) LLM prompt template ``generate_value_from_instruction`` for GTP and LLama model chat interface
+* LLM prompt template ``generate_value_from_instruction`` for GTP and LLama model chat interface ([#775](https://github.com/NVIDIA/NeMo-Guardrails/pull/775)) by @schuellc-nvidia
 
 ## [2.0-beta.3] - 2024-09-27
 
 ### Added
 
-* [#673](https://github.com/NVIDIA/NeMo-Guardrails/pull/673) Add support for new Colang 2 keyword `deactivate`.
-* [#703](https://github.com/NVIDIA/NeMo-Guardrails/pull/703) Add bot configuration as variable `$system.config`.
-* [#709](https://github.com/NVIDIA/NeMo-Guardrails/pull/709) Add basic support for most OpenAI and LLame 3 models.
-* [#712](https://github.com/NVIDIA/NeMo-Guardrails/pull/712) Add interaction loop priority levels for flows.
-* [#717](https://github.com/NVIDIA/NeMo-Guardrails/pull/717) Add CLI chat debugging commands.
+* Support for new Colang 2 keyword `deactivate` ([#673](https://github.com/NVIDIA/NeMo-Guardrails/pull/673)) by @schuellc-nvidia
+* Bot configuration as variable `$system.config` ([#703](https://github.com/NVIDIA/NeMo-Guardrails/pull/703)) by @schuellc-nvidia
+* Basic support for most OpenAI and LLame 3 models ([#709](https://github.com/NVIDIA/NeMo-Guardrails/pull/709)) by @schuellc-nvidia
+* Interaction loop priority levels for flows ([#712](https://github.com/NVIDIA/NeMo-Guardrails/pull/712)) by @schuellc-nvidia
+* CLI chat debugging commands ([#717](https://github.com/NVIDIA/NeMo-Guardrails/pull/717)) by @schuellc-nvidia
 
 ### Changed
 
-* [#669](https://github.com/NVIDIA/NeMo-Guardrails/pull/669) Merged (and removed) utils library file with core library.
+* Merged (and removed) utils library file with core library ([#669](https://github.com/NVIDIA/NeMo-Guardrails/pull/669)) by @schuellc-nvidia
 
 ### Fixed
 
-* [#672](https://github.com/NVIDIA/NeMo-Guardrails/pull/672) Fixes a event group match bug (e.g. `match $flow_ref.Finished() or $flow_ref.Failed()`)
-* [#699](https://github.com/NVIDIA/NeMo-Guardrails/pull/699) Fix issues with ActionUpdated events and user utterance action extraction.
+* Fixes a event group match bug (e.g. `match $flow_ref.Finished() or $flow_ref.Failed()`) ([#672](https://github.com/NVIDIA/NeMo-Guardrails/pull/672)) by @schuellc-nvidia
+* Fix issues with ActionUpdated events and user utterance action extraction ([#699](https://github.com/NVIDIA/NeMo-Guardrails/pull/699)) by @schuellc-nvidia
 
 ## [2.0-beta.2] - 2024-07-25
 
@@ -54,34 +54,34 @@ This second beta version of Colang brings a set of improvements and fixes.
 
 Language and runtime:
 
-* [#504](https://github.com/NVIDIA/NeMo-Guardrails/pull/504) Add colang 2.0 syntax error details by @rgstephens.
-* [#533](https://github.com/NVIDIA/NeMo-Guardrails/pull/533) Expose global variables in prompting templates.
-* [#534](https://github.com/NVIDIA/NeMo-Guardrails/pull/534) Add `continuation on unhandled user utterance` flow to the standard library (`llm.co`).
-* [#554](https://github.com/NVIDIA/NeMo-Guardrails/pull/554) Support for NLD intents.
-* [#559](https://github.com/NVIDIA/NeMo-Guardrails/pull/559) Support for the `@active` decorator which activates flows automatically.
+* Colang 2.0 syntax error details ([#504](https://github.com/NVIDIA/NeMo-Guardrails/pull/504)) by @rgstephens
+* Expose global variables in prompting templates ([#533](https://github.com/NVIDIA/NeMo-Guardrails/pull/533)) by @schuellc-nvidia
+* `continuation on unhandled user utterance` flow to the standard library (`llm.co`) ([#534](https://github.com/NVIDIA/NeMo-Guardrails/pull/534)) by @schuellc-nvidia
+* Support for NLD intents ([#554](https://github.com/NVIDIA/NeMo-Guardrails/pull/554)) by @schuellc-nvidia
+* Support for the `@active` decorator which activates flows automatically ([#559](https://github.com/NVIDIA/NeMo-Guardrails/pull/559)) by @schuellc-nvidia
 
 Other:
 
-* [#591](https://github.com/NVIDIA/NeMo-Guardrails/pull/591) Unit tests for runtime exception handling in flows.
+* Unit tests for runtime exception handling in flows ([#591](https://github.com/NVIDIA/NeMo-Guardrails/pull/591)) by @schuellc-nvidia
 
 ### Changed
 
-* [#576](https://github.com/NVIDIA/NeMo-Guardrails/pull/576) Make `if` / `while` / `when` statements compatible with python syntax, i.e., allow `:` at the end of line.
-* [#596](https://github.com/NVIDIA/NeMo-Guardrails/pull/596) Allow `not`, `in`, `is` in generated flow names.
-* [#578](https://github.com/NVIDIA/NeMo-Guardrails/pull/578) Improve bot action generation.
-* [#594](https://github.com/NVIDIA/NeMo-Guardrails/pull/594) Add more information to Colang syntax errors.
-* [#599](https://github.com/NVIDIA/NeMo-Guardrails/pull/599) Runtime processing loop also consumes generated events before completion.
-* [#540](https://github.com/NVIDIA/NeMo-Guardrails/pull/540) LLM prompting improvements targeting `gpt-4o`.
+* Make `if` / `while` / `when` statements compatible with python syntax, i.e., allow `:` at the end of line ([#576](https://github.com/NVIDIA/NeMo-Guardrails/pull/576)) by @schuellc-nvidia
+* Allow `not`, `in`, `is` in generated flow names ([#596](https://github.com/NVIDIA/NeMo-Guardrails/pull/596)) by @schuellc-nvidia
+* Improve bot action generation ([#578](https://github.com/NVIDIA/NeMo-Guardrails/pull/578)) by @schuellc-nvidia
+* Add more information to Colang syntax errors ([#594](https://github.com/NVIDIA/NeMo-Guardrails/pull/594)) by @schuellc-nvidia
+* Runtime processing loop also consumes generated events before completion ([#599](https://github.com/NVIDIA/NeMo-Guardrails/pull/599)) by @schuellc-nvidia
+* LLM prompting improvements targeting `gpt-4o` ([#540](https://github.com/NVIDIA/NeMo-Guardrails/pull/540)) by @schuellc-nvidia
 
 ### Fixed
 
-* [#525](https://github.com/NVIDIA/NeMo-Guardrails/pull/525) Fix string expression double braces.
-* [#531](https://github.com/NVIDIA/NeMo-Guardrails/pull/531) Fix Colang 2 flow activation.
-* [#577](https://github.com/NVIDIA/NeMo-Guardrails/pull/577) Remove unnecessary print statements in runtime.
-* [#593](https://github.com/NVIDIA/NeMo-Guardrails/pull/593) Fix `match` statement issue.
-* [#579](https://github.com/NVIDIA/NeMo-Guardrails/pull/579) Fix multiline string expressions issue.
-* [#604](https://github.com/NVIDIA/NeMo-Guardrails/pull/604) Fix tracking user talking state issue.
-* [#598](https://github.com/NVIDIA/NeMo-Guardrails/pull/598) Fix issue related to a race condition.
+* Fix string expression double braces ([#525](https://github.com/NVIDIA/NeMo-Guardrails/pull/525)) by @schuellc-nvidia
+* Fix Colang 2 flow activation ([#531](https://github.com/NVIDIA/NeMo-Guardrails/pull/531)) by @schuellc-nvidia
+* Remove unnecessary print statements in runtime ([#577](https://github.com/NVIDIA/NeMo-Guardrails/pull/577)) by @schuellc-nvidia
+* Fix `match` statement issue ([#593](https://github.com/NVIDIA/NeMo-Guardrails/pull/593)) by @schuellc-nvidia
+* Fix multiline string expressions issue ([#579](https://github.com/NVIDIA/NeMo-Guardrails/pull/579)) by @schuellc-nvidia
+* Fix tracking user talking state issue ([#604](https://github.com/NVIDIA/NeMo-Guardrails/pull/604)) by @schuellc-nvidia
+* Fix issue related to a race condition ([#598](https://github.com/NVIDIA/NeMo-Guardrails/pull/598)) by @schuellc-nvidia
 
 ## [2.0-beta] - 2024-05-08
 
