@@ -61,7 +61,7 @@ flow generating user intent for unhandled user utterance
   log 'unexpected user utterance: "{$event.final_transcript}"'
   log 'start generating user intent...'
   $action = 'user said "{$event.final_transcript}"'
-  $intent = await GenerateUserIntentAction(user_action=$action, max_example_flows=2)
+  $intent = await GenerateUserIntentAction(user_action=$action, max_example_flows=20)
   log 'generated user intent: {$intent}'
 
   # Generate the 'user intent' by sending out the FinishFlow event
