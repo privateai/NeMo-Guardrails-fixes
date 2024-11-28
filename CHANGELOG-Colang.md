@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Fixed
 
-* LLM prompt template ``generate_value_from_instruction`` for GTP and LLama model chat interface ([#775](https://github.com/NVIDIA/NeMo-Guardrails/pull/775)) by @schuellc-nvidia
+* LLM prompt template ``generate_value_from_instruction`` for GPT and LLama model chat interface ([#775](https://github.com/NVIDIA/NeMo-Guardrails/pull/775)) by @schuellc-nvidia
 
 ## [2.0-beta.3] - 2024-09-27
 
