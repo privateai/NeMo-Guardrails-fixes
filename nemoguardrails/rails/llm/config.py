@@ -820,7 +820,7 @@ def _parse_colang_files_recursively(
             current_file, content=flow_definitions, version=colang_version
         )
 
-        _DOCUMENTATION_LINK = "https://docs.nvidia.com/nemo/guardrails/colang_2/getting_started/dialog-rails.html"  # Replace with the actual documentation link
+        _DOCUMENTATION_LINK = "https://docs.nvidia.com/nemo/guardrails/colang-2/getting-started/dialog-rails.html"  # Replace with the actual documentation link
 
         warnings.warn(
             "Configuring input/output rails in config.yml is deprecated. "

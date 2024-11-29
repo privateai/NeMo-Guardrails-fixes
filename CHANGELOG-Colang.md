@@ -88,7 +88,7 @@ Other:
 
 ### Added
 
-* [Standard library of flows](https://docs.nvidia.com/nemo/guardrails/colang_2/language_reference/the-standard-library.html): `core.co`, `llm.co`, `guardrails.co`, `avatars.co`, `timing.co`, `utils.co`.
+* [Standard library of flows](https://docs.nvidia.com/nemo/guardrails/colang-2/language-reference/the-standard-library.html): `core.co`, `llm.co`, `guardrails.co`, `avatars.co`, `timing.co`, `utils.co`.
 
 ### Changed
 
@@ -125,7 +125,7 @@ Other:
 
 ## [2.0-alpha] - 2024-02-28
 
-[Colang 2.0](https://docs.nvidia.com/nemo/guardrails/colang_2/overview.html) represents a complete overhaul of both the language and runtime. Key enhancements include:
+[Colang 2.0](https://docs.nvidia.com/nemo/guardrails/colang-2/overview.html) represents a complete overhaul of both the language and runtime. Key enhancements include:
 
 ### Added
 
