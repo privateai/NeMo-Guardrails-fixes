@@ -17,6 +17,7 @@ from __future__ import annotations
 import asyncio
 import json
 import sys
+from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Union
 
 from langchain.callbacks.manager import (
@@ -171,6 +172,12 @@ class TestChat:
                             final_transcript=msg,
                             action_uid=uid,
                             is_success=True,
+                            event_created_at=(
+                                datetime.now(timezone.utc) + timedelta(milliseconds=1)
+                            ).isoformat(),
+                            action_finished_at=(
+                                datetime.now(timezone.utc) + timedelta(milliseconds=1)
+                            ).isoformat(),
                         ),
                     ]
                 )
