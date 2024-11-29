@@ -170,7 +170,7 @@ The changes related to the Colang language and runtime have moved to [CHANGELOG-
 
 ### Added
 
-- [Colang 2.0 Documentation](https://docs.nvidia.com/nemo/guardrails/colang_2/overview.html).
+- [Colang 2.0 Documentation](https://docs.nvidia.com/nemo/guardrails/colang-2/overview.html).
 - Revamped [NeMo Guardrails Documentation](https://docs.nvidia.com/nemo-guardrails).
 
 ### Fixed
@@ -360,7 +360,7 @@ Documentation:
 - Example [RAG using Pinecone](./examples/configs/rag/pinecone).
 - Support for loading a configuration from dictionary, i.e. `RailsConfig.from_content(config=...)`.
 - Guidance on [LLM support](./docs/user_guides/llm-support.md).
-- Support for `LLMRails.explain()` (see the [Getting Started](./docs/getting_started) guide for sample usage).
+- Support for `LLMRails.explain()` (see the [Getting Started](./docs/getting-started) guide for sample usage).
 
 ### Changed
 
@@ -369,7 +369,7 @@ Documentation:
 - Allow using actions which are not `async` functions.
 - Disabled pretty exceptions in CLI.
 - Upgraded dependencies.
-- Updated the [Getting Started Guide](./docs/getting_started).
+- Updated the [Getting Started Guide](./docs/getting-started).
 - Main [README](./README.md) now provides more details.
 - Merged original examples into a single [ABC Bot](./examples/bots/abc) and removed the original ones.
 - Documentation improvements.

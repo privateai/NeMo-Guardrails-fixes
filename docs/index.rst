@@ -28,10 +28,10 @@ NVIDIA NeMo Guardrails
    :name: Colang 2.0
    :maxdepth: 2
 
-   colang_2/overview
-   colang_2/whats-changed
-   colang_2/getting_started/index
-   colang_2/language_reference/index
+   colang-2/overview
+   colang-2/whats-changed
+   colang-2/getting-started/index
+   colang-2/language-reference/index
 
 .. toctree::
    :caption: User Guides
