@@ -14,7 +14,7 @@ jobs:
   call-tests:
     strategy:
       matrix:
-        os: [Ubuntu, Windows, macOS]
+        os: [Windows, macOS] # exclude Ubuntu as it is available in pr-tests
         python-version: ["3.9", "3.10", "3.11"]
         include:
           - os: Ubuntu
