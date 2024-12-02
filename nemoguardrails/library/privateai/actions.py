@@ -18,6 +18,7 @@
 import logging
 import os
 
+from urllib.parse import urlparse
 from nemoguardrails import RailsConfig
 from nemoguardrails.actions import action
 from nemoguardrails.library.privateai.request import private_ai_detection_request
@@ -44,7 +45,8 @@ async def detect_pii(source: str, text: str, config: RailsConfig):
     server_endpoint = pai_config.server_endpoint
     enabled_entities = getattr(pai_config, source).entities
 
-    if "api.private-ai.com" in server_endpoint and not pai_api_key:
+    parsed_url = urlparse(server_endpoint)
+    if parsed_url.hostname == "api.private-ai.com" and not pai_api_key:
         raise ValueError(
             "PAI_API_KEY environment variable required for Private AI cloud API."
         )
