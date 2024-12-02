@@ -20,6 +20,7 @@ import logging
 from typing import Any, Dict, List, Optional
 
 import aiohttp
+from urllib.parse import urlparse
 
 log = logging.getLogger(__name__)
 
@@ -42,7 +43,8 @@ async def private_ai_detection_request(
     Returns:
         True if PII is detected, False otherwise.
     """
-    if "api.private-ai.com" in server_endpoint and not api_key:
+    parsed_url = urlparse(server_endpoint)
+    if parsed_url.hostname == "api.private-ai.com" and not api_key:
         raise ValueError("'api_key' is required for Private AI cloud API.")
 
     payload: Dict[str, Any] = {
