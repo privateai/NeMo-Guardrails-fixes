@@ -97,18 +97,6 @@ def test_1_3(config_1):
     chat << "got inattentive"
 
 
-def test_1_3(config_1):
-    chat = TestChat(
-        config_1,
-        llm_completions=[],
-    )
-
-    chat >> "down"
-    chat << "down"
-    chat >> "hello there"
-    chat << "got inattentive"
-
-
 def test_1_4(config_1):
     chat = TestChat(
         config_1,
