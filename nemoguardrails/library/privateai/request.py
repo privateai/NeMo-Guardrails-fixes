@@ -18,9 +18,9 @@
 import json
 import logging
 from typing import Any, Dict, List, Optional
+from urllib.parse import urlparse
 
 import aiohttp
-from urllib.parse import urlparse
 
 log = logging.getLogger(__name__)
 

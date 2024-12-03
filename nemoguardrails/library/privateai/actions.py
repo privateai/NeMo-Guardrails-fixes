@@ -17,8 +17,8 @@
 
 import logging
 import os
-
 from urllib.parse import urlparse
+
 from nemoguardrails import RailsConfig
 from nemoguardrails.actions import action
 from nemoguardrails.library.privateai.request import private_ai_detection_request
